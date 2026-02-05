@@ -18,7 +18,7 @@ The Vectary plugin for Figma enables seamless integration of 3D projects into Fi
 
 
 
-* Apply design to a 3D project with just two clicks
+* Apply design to a 3D project with just two clicks.
 * Real-time 3D model fitting on the canvas using Preview mode
 * Export rendered image to the Figma canvas
 * Immediate texture reflection in AR (AR can be activated from Figma)
