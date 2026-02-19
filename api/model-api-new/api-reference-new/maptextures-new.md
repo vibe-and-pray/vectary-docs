@@ -24,10 +24,10 @@ mapTextures(
 
 ```typescript
 type MapOptions = {
-  top?: number;    // Offset from top (percentage 0-100)
-  left?: number;   // Offset from left (percentage 0-100)
-  width?: number;  // Width (percentage 0-100)
-  height?: number; // Height (percentage 0-100)
+ top?: number;    // Offset from top in pixels
+ left?: number;   // Offset from left in pixels
+ width?: number;  // Width in pixels
+ height?: number; // Height in pixels
 };
 ```
 
@@ -58,7 +58,9 @@ await api.mapTextures(baseId, overlayId, {
 
 #### Notes
 
-* Values are percentages (0-100), not pixels
+
+
+* Values are pixels relative to the base texture dimensions. For example, if the base texture is 512×512, passing `width: 512` will cover the full width.
 * `width` has preference over `height` if both specified
 * `top` and `left` default to 0
 * The overlay is composited onto the base texture permanently
