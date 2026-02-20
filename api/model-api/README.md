@@ -37,7 +37,7 @@ Unlike low-level libraries like Three.js or Babylon.js, most visual configuratio
 
 
 
-A few examples of API capabilities (see [<mark style="color:blue;">API Reference</mark>](/broken/pages/o8PzQeLFkfMmmzdiqalR) for the full list of methods).
+A few examples of API capabilities (see [<mark style="color:blue;">**API Reference**</mark>](api-reference/) for the full list of methods).
 
 
 
