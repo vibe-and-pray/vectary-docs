@@ -306,3 +306,79 @@ type Material = {
 };
 ```
 
+
+
+### Textures <a href="#textures" id="textures"></a>
+
+#### TextureConfig <a href="#textureconfig" id="textureconfig"></a>
+
+
+
+```
+type TextureConfig<T> = {
+	id?: string;
+	name?: string;
+	filters?: TextureFilterSettings;
+	mapping?: TextureMapSettings;
+	wrapping?: WrapMode;
+};
+```
+
+<details open>
+
+<summary></summary>
+
+```
+type TextureFilterSettings = {
+	brightness: number;
+	contrast: number;
+	hue: number;
+	saturation: number;
+	invert: boolean;
+};
+```
+
+</details>
+
+<details open>
+
+<summary></summary>
+
+```
+type TextureMapSettings = {
+	offsetY: number;
+	offsetX: number;
+	repeatX: number;
+	repeatY: number;
+	rotation: number;
+};
+```
+
+</details>
+
+<details open>
+
+<summary></summary>
+
+```
+enum WrapMode {
+    REPEAT = 0,
+    MIRRORED_REPEAT = 1,
+    CLAMP = 2
+}
+```
+
+</details>
+
+#### TextureData <a href="#texturedata" id="texturedata"></a>
+
+```
+type TextureData = {
+	image: ArrayBuffer;
+	width: number;
+	height: number;
+};
+```
+
+
+
