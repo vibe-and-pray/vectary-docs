@@ -4,26 +4,35 @@ hidden: true
 
 # setActiveMaterial
 
-Sets the active [Material](../type-definitions.md#material) in a specific object.
+#### setActiveMaterial
+
+Sets the active material of an object.
+
+#### Signature
 
 ```typescript
-setActiveMaterial(
-	objectName: string,
-	materialName: string
-): Promise<void>
+setActiveMaterial(objectName: string, materialName: string): Promise<void>
 ```
 
+#### Parameters
 
+| Name           | Type     | Required | Description                      |
+| -------------- | -------- | -------- | -------------------------------- |
+| `objectName`   | `string` | Yes      | Name of the object               |
+| `materialName` | `string` | Yes      | Name of the material to activate |
 
-| Parameters   | Description                                                   | Type     |
-| ------------ | ------------------------------------------------------------- | -------- |
-| objectName   | The name of the object we want to set the active Material to. | `string` |
-| materialName | The name of the material we want to make active.              | `string` |
+#### Returns
 
+`Promise<void>`
 
-
-Usage:
+#### Usage
 
 ```javascript
-await modelApi.setActiveMaterial('Adjustable Headband', 'White');
+await api.setActiveMaterial("Chair", "Leather Red");
 ```
+
+#### Notes
+
+* The material must already be assigned to the object
+* Does NOT trigger the `configurator_state_change` event
+* Use `setConfigurationState()` if you need the event to fire

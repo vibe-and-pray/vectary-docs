@@ -6,9 +6,9 @@ hidden: true
 
 
 
-Attempts to set an array with a [`ConfigurationState`](../type-definitions.md#configurationstate) for present [`Variants`](../../../documentation/3d-configurator/floating-ui/variants-ui.md) and [`Materials`](../../../documentation/3d-configurator/floating-ui/materials-ui.md) in the model.
+Attempts to set an array with a [`ConfigurationState`](/broken/pages/C6wJuaF0hYfBFP62i35x#configurationstate) for present [`Variants`](../../../documentation/3d-configurator/floating-ui/variants-ui.md) and [`Materials`](../../../documentation/3d-configurator/floating-ui/materials-ui.md) in the model.
 
-Returns an array with the final [`ConfigurationState`](../type-definitions.md#configurationstate) that was set.
+Returns an array with the final [`ConfigurationState`](/broken/pages/C6wJuaF0hYfBFP62i35x#configurationstate) that was set.
 
 ```typescript
 setConfigurationState(
@@ -18,9 +18,9 @@ setConfigurationState(
 
 
 
-| Parameters | Description                                                                                                                                                                                                                                                                            |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| state      | <p><code>Array&#x3C;ConfigurationState></code><br><br>An array with different states for <a href="../type-definitions.md#variantswitcherdata"><code>VariantSwitcherData</code></a> and <a href="../type-definitions.md#materialswitcherdata"><code>MaterialSwitcherData</code></a></p> |
+| Parameters | Description                                                                                                                                                                                                                                                                                                    |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| state      | <p><code>Array&#x3C;ConfigurationState></code><br><br>An array with different states for <a href="/broken/pages/C6wJuaF0hYfBFP62i35x#variantswitcherdata"><code>VariantSwitcherData</code></a> and <a href="/broken/pages/C6wJuaF0hYfBFP62i35x#materialswitcherdata"><code>MaterialSwitcherData</code></a></p> |
 
 
 

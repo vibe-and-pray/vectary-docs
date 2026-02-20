@@ -1,20 +1,6 @@
 ---
 description: Description of the process for upgrading to the Pro AI plan.
 hidden: true
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: false
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Upgrade to Pro AI

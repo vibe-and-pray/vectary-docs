@@ -4,24 +4,45 @@ hidden: true
 
 # setAnimationPlayhead
 
-Sets the playhead of an animation to a specific percentage of completion, `0 -> 100`.
+
+
+#### setAnimationPlayhead
+
+
+
+Sets the animation progress to a specific position.
+
+#### Signature
 
 ```typescript
-setAnimationPlayhead(
-	animationName: string,
-	percentage: number,
-): Promise<void>
+setAnimationPlayhead(name: string, value: number): Promise<void>
 ```
 
+#### Parameters
 
+| Parameter | Type   | Required | Description            |
+| --------- | ------ | -------- | ---------------------- |
+| name      | string | Yes      | Animation name         |
+| value     | number | Yes      | Progress value (0-100) |
 
-<table><thead><tr><th width="215">Parameters</th><th>Description</th><th>Type</th></tr></thead><tbody><tr><td>animationName</td><td>Name of the animation we want to change its playhead’s position.</td><td><code>string</code></td></tr><tr><td>percentage</td><td>Must be from <code>0</code> to <code>100</code>. Where <code>0</code> is at the beginning of the animation and <code>100</code> at the end.</td><td><code>number</code></td></tr></tbody></table>
+#### Returns
 
+`Promise<void>`
 
+#### Usage
 
-Usage:
+```javascript
+// Go to start
+await api.setAnimationPlayhead("Open", 0);
 
-```jsx
-await modelApi.setAnimationPlayhead('goUp', 50);
+// Go to middle
+await api.setAnimationPlayhead("Open", 50);
+
+// Go to end
+await api.setAnimationPlayhead("Open", 100);
 ```
 
+#### Notes
+
+* Value is a percentage from 0 to 100
+* The animation is paused at the specified position

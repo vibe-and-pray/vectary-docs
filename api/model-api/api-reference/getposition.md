@@ -4,34 +4,42 @@ hidden: true
 
 # getPosition
 
-Returns a [Vector3](../type-definitions.md#vector3) with the position in 3d space of an [Object](../type-definitions.md#objects).
+#### getPosition
+
+
+
+Returns the position of an object.
+
+####
+
+#### Signature
 
 ```typescript
-getPosition(
-	objectName: string
-): Promise<Vector3>
+getPosition(objectName: string): Promise<Vector3>
 ```
 
-| Parameters | Description                                                        | Type     |
-| ---------- | ------------------------------------------------------------------ | -------- |
-| objectName | Specifies what object do we want to retrieve the information from. | `string` |
+#### Parameters
 
+| Name         | Type     | Required | Description |
+| ------------ | -------- | -------- | ----------- |
+| `objectName` | `string` | Yes      | Object name |
 
+#### Returns
 
-Usage:
+`Promise<Vector3>` — Object position as `{x, y, z}`.\
+\
+See [Vector3](https://help.vectary.com/api/model-api-new/api-reference-new#vector3) in Common Types.
+
+#### Usage
 
 ```javascript
-await modelApi.getPosition("Box");
+const position = await api.getPosition("Chair");
+console.log(position); // { x: 0, y: 100, z: 50 }
 ```
 
+#### Notes
 
-
-Return value:
-
-```jsx
-{
-	x: 0,
-	y: 0,
-	z: 0,
-}
-```
+* Returns **local** coordinates (relative to parent), not world coordinates
+* Coordinates use Z-up orientation
+* Same value as `getObjects()[0].position`
+* Only accepts string, not array

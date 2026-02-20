@@ -4,33 +4,63 @@ hidden: true
 
 # getConfigurationState
 
-Returns an array with the current [`ConfigurationState`](../type-definitions.md#configurationstate) of all [`Variants`](../../../documentation/3d-configurator/floating-ui/variants-ui.md) and [`Materials`](../../../documentation/3d-configurator/floating-ui/materials-ui.md)&#x20;
 
-```tsx
+
+#### getConfigurationState
+
+
+
+Returns the current state of all variants and materials in the scene.
+
+
+
+#### Signature
+
+```typescript
 getConfigurationState(): Promise<ConfigurationState[]>
 ```
 
-***
 
-Usage:
 
-```typescript
-await modelApi.getConfigurationState();
+#### Parameters
+
+None.
+
+
+
+#### Returns
+
+`Promise<ConfigurationState[]>` — Array of variant and material states.
+
+See [ConfigurationState](https://help.vectary.com/api/model-api-new/api-reference-new#configurationstate) in Common Types.
+
+
+
+#### Usage
+
+```javascript
+const state = await api.getConfigurationState();
+console.log(state);
 ```
 
-Return value:
+
+
+#### Example response
 
 ```javascript
 [
-    [
-        {
-            "variant": "Object Switcher",
-            "active_object": "NUNO Stand"
-        },
-        {
-            "object": "Adjustable Headband",
-            "active_material": "White"
-        }
-    ]
+  {
+    variant: "Chair Type",
+    variant_instanceId: "abc123",
+    active_object: "Modern Chair",
+    active_object_instanceId: "def456"
+  },
+  {
+    object: "Table",
+    object_instanceId: "ghi789",
+    active_material: "Oak Wood",
+    active_material_instanceId: "jkl012"
+  }
 ]
 ```
+

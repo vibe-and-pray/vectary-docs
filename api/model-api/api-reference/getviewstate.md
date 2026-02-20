@@ -4,40 +4,40 @@ hidden: true
 
 # getViewState
 
-Gets the current [CameraViewState](../type-definitions.md#cameraviewstate) of the scene.
+#### getViewState
+
+Returns the current camera position and orientation.
+
+#### Signature
 
 ```typescript
 getViewState(): Promise<CameraViewState>
 ```
 
+#### Parameters
 
+None.
 
-Usage:
+#### Returns
 
-```jsx
-await modelApi.getViewState();
+`Promise<CameraViewState>` — Current camera state. \
+See [CameraViewState](https://help.vectary.com/api/model-api-new/api-reference-new#cameraviewstate) in Common Types.
+
+#### Usage
+
+```javascript
+const view = await api.getViewState();
+console.log("Camera position:", view.position);
+console.log("Looking at:", view.target);
+console.log("Up direction:", view.upVector);
+
+// Save for later restore
+const savedView = await api.getViewState();
 ```
 
+#### Notes
 
-
-Return value:
-
-```jsx
-{
-    "position": {
-        "x": 3984.4911973303847,
-        "y": -5567.485597975884,
-        "z": 1267.920531047499
-    },
-    "target": {
-        "x": 13.783046003519303,
-        "y": -36.59329436183907,
-        "z": 495.90485613717385
-    },
-    "upVector": {
-        "x": -0.06570553967248556,
-        "y": 0.09152278380316671,
-        "z": 0.99363291114036
-    }
-}
-```
+* `position` — camera location in world coordinates
+* `target` — point the camera is looking at
+* `upVector` — camera's "up" direction (typically close to Z-up)
+* All values are numbers

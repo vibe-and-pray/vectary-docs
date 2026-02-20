@@ -4,30 +4,46 @@ hidden: true
 
 # getRotation
 
-Returns a [Vector3](../type-definitions.md#vector3) with the rotation in 3d space of an [Object](../type-definitions.md#objects).
+### getRotation
+
+Returns the rotation of an object.
+
+
+
+#### Signature
 
 ```typescript
-getRotation(
-	objectName: string
-): Promise<Vector3>
+getRotation(objectName: string): Promise<Euler>
 ```
 
-<table><thead><tr><th>Parameters</th><th width="318">Description</th><th>Type</th></tr></thead><tbody><tr><td>objectName</td><td>Specifies what object do we want to retrieve the information from.</td><td><code>string</code></td></tr></tbody></table>
+#### Parameters
 
+| Name         | Type     | Required | Description |
+| ------------ | -------- | -------- | ----------- |
+| `objectName` | `string` | Yes      | Object name |
 
+#### Returns
 
-Usage:
+`Promise<Euler>` — Object rotation as `{x, y, z, order}`.
+
+* `x`, `y`, `z` — rotation angles in **degrees**
+* `order` — rotation order (e.g., `"XYZ"`)
+
+See [Euler](https://help.vectary.com/api/model-api-new/api-reference-new#euler) in Common Types.\
+<br>
+
+#### Usage
 
 ```javascript
-await modelApi.getPosition("Box");
+const rotation = await api.getRotation("Chair");
+console.log(rotation); // { x: 0, y: 45, z: 0, order: "XYZ" }
 ```
 
-Return value:
+#### Notes
 
-```jsx
-{
-	x: 0,
-	y: 0,
-	z: 0,
-}
-```
+* Values are in **degrees**, not radians
+* Returns **local** rotation (relative to parent)
+* Same value as `getObjects()[0].rotation`
+* Only accepts string, not array
+
+<br>

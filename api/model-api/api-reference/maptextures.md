@@ -4,36 +4,68 @@ hidden: true
 
 # mapTextures
 
-Maps two textures together. The top texture is mapped on top of the base texture, with the specified options.
+#### mapTextures
+
+Overlays a texture on top of another. Useful for print-on-demand applications.
+
+#### Signature
 
 ```typescript
 mapTextures(
-	baseTextureId: string,
-	topTextureId: string,
-	options?: {
-		width?: number;
-		height?: number;
-		top?: number;
-		left?: number;
-	}
+  baseTextureId: string, 
+  overlayTextureId: string, 
+  options?: MapOptions
 ): Promise<void>
 ```
 
+#### Parameters
 
+| Name               | Type         | Required | Description               |
+| ------------------ | ------------ | -------- | ------------------------- |
+| `baseTextureId`    | `string`     | Yes      | ID of the base texture    |
+| `overlayTextureId` | `string`     | Yes      | ID of the overlay texture |
+| `options`          | `MapOptions` | No       | Positioning options       |
 
-<table><thead><tr><th>Parameters</th><th width="411">Description</th><th>Type</th></tr></thead><tbody><tr><td>baseTextureId</td><td>Id of a <a href="../type-definitions.md#textureconfig">TextureConfig</a> that can be retrieved from a <a href="../type-definitions.md#material">Material’s</a> specific texture channel.</td><td><code>string</code></td></tr><tr><td>topTextureId</td><td>Id of the top texture that will be applied on top of the base.</td><td><code>string</code></td></tr><tr><td>options</td><td><p>All are optional.</p><p><code>width</code> has preference over <code>height</code> in case they are both specified.</p><p><code>top</code> and <code>left</code> default to 0.</p></td><td>width, height, top, left</td></tr></tbody></table>
+```typescript
+type MapOptions = {
+ top?: number;    // Offset from top in pixels
+ left?: number;   // Offset from left in pixels
+ width?: number;  // Width in pixels
+ height?: number; // Height in pixels
+};
+```
 
+#### Returns
 
+`Promise<void>`
 
-Usage:
+#### Usage
 
-```jsx
-const material = await modelApi.getActiveMaterial('T-shirt');
-const newTextureId = await modelApi.addTexture({TextureData | Blob})
+```javascript
+// Get base texture from material
+const material = await api.getActiveMaterial("T-Shirt");
+const baseId = material.baseColor.textureConfig.id;
 
-await modelApi.mapTextures(material.baseColor.textureConfig.id, newTextureId, {
-	top: topInput.value,
-	left: leftInput.value,
-	width: widthInput.value
+// Add user's custom image
+const overlayId = await api.addTexture(userFile);
+
+// Map overlay onto base (full size)
+await api.mapTextures(baseId, overlayId);
+
+// Map with positioning
+await api.mapTextures(baseId, overlayId, {
+  top: 20,
+  left: 30,
+  width: 40
 });
 ```
+
+#### Notes
+
+
+
+* Values are pixels relative to the base texture dimensions. For example, if the base texture is 512×512, passing `width: 512` will cover the full width.
+* `width` has preference over `height` if both specified
+* `top` and `left` default to 0
+* The overlay is composited onto the base texture permanently
+* Ideal for product customization (t-shirts, mugs, phone cases)

@@ -4,32 +4,36 @@ hidden: true
 
 # getScale
 
-Returns a [Vector3](../type-definitions.md#vector3) with the scale of an [Object](../type-definitions.md#object).
+#### getScale
+
+Returns the scale of an object.
+
+#### Signature
 
 ```typescript
-getScale(
-	objectName: string
-): Promise<Vector3>
+getScale(objectName: string): Promise<Vector3>
 ```
 
-<table><thead><tr><th>Parameters</th><th width="318">Description</th><th>Type</th></tr></thead><tbody><tr><td>objectName</td><td>Specifies what object do we want to retrieve the information from.</td><td><code>string</code></td></tr></tbody></table>
+#### Parameters
 
+| Name         | Type     | Required | Description |
+| ------------ | -------- | -------- | ----------- |
+| `objectName` | `string` | Yes      | Object name |
 
+#### Returns
 
-Usage:
+`Promise<Vector3>` — Object scale as `{x, y, z}`.\
+See [Vector3](https://help.vectary.com/api/model-api-new/api-reference-new#vector3) in Common Types.<br>
+
+#### Usage
 
 ```javascript
-await modelApi.init();
+const scale = await api.getScale("Chair");
+console.log(scale); // { x: 1, y: 1, z: 1 }
 ```
 
+#### Notes
 
-
-Return value:
-
-```jsx
-{
-	x: 1,
-	y: 1,
-	z: 1,
-}
-```
+* Default scale is `{ x: 1, y: 1, z: 1 }`
+* Returns **local** scale (relative to parent)
+* Only accepts string, not array

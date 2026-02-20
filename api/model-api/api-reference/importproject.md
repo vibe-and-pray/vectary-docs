@@ -4,23 +4,36 @@ hidden: true
 
 # importProject
 
-Imports another project from your workspace (must be shared and not private) into the current scene.
+### importProject
+
+Imports another Vectary project into the current scene.
+
+#### Signature
 
 ```typescript
-importProject(
-	projectId: string
-): Promise<void>
+importProject(projectId: string): Promise<void>
 ```
 
+#### Parameters
 
+| Parameter | Type   | Required | Description                      |
+| --------- | ------ | -------- | -------------------------------- |
+| projectId | string | Yes      | Project UUID from your workspace |
 
-<table><thead><tr><th>Parameters</th><th width="405">Description</th><th>Type</th></tr></thead><tbody><tr><td>projectId</td><td><p>The id of the project from your workspace that you would like to load into the current scene.</p><p>Must be in UUID format, which you can get from the Dashboard project card menu.<br><br><img src="../../../.gitbook/assets/image (362).png" alt=""></p></td><td><code>string</code></td></tr></tbody></table>
+#### Returns
 
+`Promise<void>`
 
+#### Usage
 
-Usage:
-
-```jsx
-await modelApi.importProject('bf104b1b-db6f-4a0f-89a0-624cabb1c3c7');
+```javascript
+await api.importProject("bf104b1b-db6f-4a0f-89a0-624cabb1c3c7");
 ```
 
+#### Notes
+
+* Project must be **shared** (not private)
+* Project ID must be in UUID format
+* Get the UUID from Dashboard → Project card menu → Copy ID
+* All objects from the project are imported into the current scene
+* Returns `void`, not an array of imported objects

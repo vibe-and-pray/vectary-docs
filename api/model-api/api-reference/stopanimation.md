@@ -4,23 +4,34 @@ hidden: true
 
 # stopAnimation
 
-Stops the animation specified by its name.
+
+
+#### stopAnimation
+
+
+
+Stops a playing animation.
+
+
+
+#### Signature
 
 ```typescript
-stopAnimation(
-	animationName: string
-): Promise<void>
+stopAnimation(name: string): Promise<void>
 ```
 
+#### Parameters
 
+| Parameter | Type   | Required | Description    |
+| --------- | ------ | -------- | -------------- |
+| name      | string | Yes      | Animation name |
 
-<table><thead><tr><th width="215">Parameters</th><th>Description</th><th>Type</th></tr></thead><tbody><tr><td>animationName</td><td>Name of the animation we want to stop.</td><td><code>string</code></td></tr></tbody></table>
+#### Returns
 
+`Promise<void>`
 
+#### Usage
 
-Usage:
-
-```jsx
-await modelApi.stopAnimation('goUp');
+```javascript
+await api.stopAnimation("Spin");
 ```
-

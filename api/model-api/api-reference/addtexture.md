@@ -4,60 +4,62 @@ hidden: true
 
 # addTexture
 
-Adds a new texture/image to the model, and returns its id.
+#### addTexture
+
+Adds a new texture to the scene and returns its ID.
+
+#### Signature
 
 ```typescript
-addTexture(
-	image: TextureData | Blob
-): Promise<string>
+addTexture(image: TextureData | Blob | File): Promise<string>
 ```
 
+#### Parameters
 
+| Name    | Type                          | Required | Description |
+| ------- | ----------------------------- | -------- | ----------- |
+| `image` | `TextureData \| Blob \| File` | Yes      | Image data  |
 
-<table><thead><tr><th>Parameters</th><th width="411">Description</th><th>Type</th></tr></thead><tbody><tr><td>image</td><td>Object containing the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>, width and height of the texture to be set.</td><td><a href="../type-definitions.md#texturedata">TextureData</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob">Blob</a></td></tr></tbody></table>
-
-
-
-Usage:
-
-```jsx
-// Working with Canvas and ImageData
-const img = new Image();
-img.onload = async () => {
-	canvas.width = img.width;
-	canvas.height = img.height;
-	ctx.drawImage(img, 0, 0, img.width, img.height);
-	const imgData = ctx.getImageData(0, 0, img.width, img.height);
-
-	newTextureId = await modelApi.addTexture({
-		image: imgData.data,
-		width: imgData.width,
-		height: imgData.height
-	});
+```typescript
+type TextureData = {
+  image: ArrayBuffer;
+  width: number;
+  height: number;
 };
-img.src = "{your_image_url}"
 ```
 
-```jsx
-// Working with <input type="file">
-uploadButton.addEventListener('change', async (e) => {
-		const blob = uploadButton.files[0];
-		newTextureId = await modelApi.addTexture(blob);
-	}
+#### Returns
+
+`Promise<string>` — ID of the created texture (UUID format).
+
+#### Usage
+
+```javascript
+// From File input
+const fileInput = document.getElementById('file-input');
+const textureId = await api.addTexture(fileInput.files[0]);
+
+// From Blob (e.g., fetched image)
+const blob = await fetch('image.png').then(r => r.blob());
+const textureId = await api.addTexture(blob);
+
+// From Canvas as TextureData
+const canvas = document.createElement('canvas');
+const ctx = canvas.getContext('2d');
+ctx.drawImage(img, 0, 0);
+const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+const textureId = await api.addTexture({
+  image: imgData.data.buffer,
+  width: canvas.width,
+  height: canvas.height
 });
 ```
 
-```jsx
-// Working with URL directly
-fetch("{your_image_url}")
-	.then(response => response.blob())
-	.then(blob => {
-		newTextureId = await modelApi.addTexture(blob);
-	});
-```
+#### Notes
 
-Return value:
-
-```jsx
-"230fceca-e2cc-4011-9bf4-56c6b091ec00" // uuidv4 format
-```
+* Creates texture in memory but does NOT apply it to any material
+* Use `mapTextures()` to overlay on existing texture
+* Use `addOrEditMaterial()` to assign to a material
+* Supported formats: PNG, JPG, WebP
+* URL strings are NOT supported

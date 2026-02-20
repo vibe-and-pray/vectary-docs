@@ -4,26 +4,45 @@ hidden: true
 
 # setRotation
 
-Sets the rotation of an object base on given x, y, z values.
+#### setRotation
+
+Sets the rotation of an object.
+
+
+
+#### Signature
 
 ```typescript
-setRotation(
-	objectName: string,
-	position: Vector3,
-): Promise<void>
+setRotation(objectName: string, rotation: Euler): Promise<void>
 ```
 
-<table><thead><tr><th>Parameters</th><th width="318">Description</th><th>Type</th></tr></thead><tbody><tr><td>objectName</td><td>Specifies what object do we want to retrieve the information from.</td><td><code>string</code></td></tr><tr><td>rotation</td><td><code>x</code>, <code>y</code>, <code>z</code> Euler angles of the new rotation.</td><td><a href="../type-definitions.md#vector3"><code>Vector3</code></a></td></tr></tbody></table>
 
 
+#### Parameters
 
-Usage:
+<table><thead><tr><th width="166.328125">Name</th><th width="136.90625">Type</th><th width="115.171875">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>objectName</code></td><td><code>string</code></td><td>Yes</td><td>Object name</td></tr><tr><td><code>rotation</code></td><td><a href="https://help.vectary.com/api/model-api-new/api-reference-new#euler">Euler</a></td><td>Yes</td><td>New rotation <code>{x, y, z}</code> in degrees. Optional <code>order</code> field.</td></tr></tbody></table>
+
+#### Returns
+
+`Promise<void>`
+
+#### Usage
 
 ```javascript
-await modelApi.setRotation('Box', {
-	x: 90, 
-	y: 180, 
-	z: 360
-});
+// Rotate 45 degrees around Y axis
+await api.setRotation("Chair", { x: 0, y: 45, z: 0 });
+
+// With explicit rotation order
+await api.setRotation("Chair", { x: 90, y: 0, z: 0, order: "XYZ" });
 ```
+
+#### Notes
+
+* Values are in **degrees**, not radians
+* Sets **local** rotation (relative to parent)
+* **Important:** Always provide all three coordinates (x, y, z). Missing values become `null`, not preserved
+* The `order` field is optional (defaults to "XYZ")
+* Only accepts string name, not array
+
+
 

@@ -4,31 +4,67 @@ hidden: true
 
 # addEventListener
 
-You can subscribe to any of the [`ApiEvents`](addeventlistener.md#api-events), by adding a callback function that will execute whenever the subscribed event triggers.
+
+
+#### addEventListener
+
+
+
+Listens for events sent from the scene. Used to receive events from Interactions that have "Send event" as their action.
+
+
+
+#### **Signature**
+
+
 
 ```typescript
-addEventListener(
-		eventName: ApiEvents, 
-		callback: (result: EventResponses) => void
-): Promise<void>
+addEventListener(eventName: string, callback: (value: any) => void): Promise<void>
 ```
 
-<table><thead><tr><th width="266">Parameters</th><th>Description</th></tr></thead><tbody><tr><td>eventName</td><td><a href="addeventlistener.md#api-events">ApiEvents</a><br>Name of the event that the method will subscribe to.</td></tr><tr><td>callback</td><td><code>(result:</code> <a href="addeventlistener.md#event-responses"><code>EventResponses</code></a><code>) => void</code><br>Callback function which takes as parameter the result of the event you are subscribing to.</td></tr></tbody></table>
 
-#### Usage:
+
+#### **Parameters**
+
+| Parameter | Type     | Required | Description                            |
+| --------- | -------- | -------- | -------------------------------------- |
+| eventName | string   | Yes      | Name of the event to listen for        |
+| callback  | function | Yes      | Function called when event is received |
+
+
+
+#### **Returns**
+
+
+
+`Promise<void>`
+
+
+
+#### **Usage**
 
 ```javascript
-modelApi.addEventListener(
-		"configurator_state_change",
-		(res) => {
-		    // Your code here
-		}
-);
+await api.addEventListener("product_clicked", (value) => {
+  console.log("Product clicked, value:", value);
+});
 ```
 
 
 
-Example&#x20;
+#### **How it works**<br>
 
-{% embed url="https://codesandbox.io/s/add-removeeventlistener-ebeq4d?autoresize=1&expanddevtools=1&fontsize=14&hidenavigation=1&theme=dark&codemirror=1" fullWidth="true" %}
+1. In Studio, create an Interaction with action **Send event** and specify event name
+2. The trigger can be any available Studio trigger (On click, Mouse enter, On load, etc.)
+3. When triggered, your callback receives the value of a Variable with the same name as the event
 
+If no Variable with the event name exists, the callback receives `undefined`.
+
+
+
+#### **Notes**
+
+
+
+* Event name must match the name specified in Studio's "Send event" action
+* Multiple listeners can be added for the same event
+* Use `removeEventListener()` to stop listening

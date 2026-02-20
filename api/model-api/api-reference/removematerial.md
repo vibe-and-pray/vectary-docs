@@ -4,23 +4,34 @@ hidden: true
 
 # removeMaterial
 
-Here goes a description of what the method does
+#### removeMaterial
+
+Removes a material from an object.
+
+#### Signature
 
 ```typescript
-removeMaterial(
-	objectName: string,
-	materialName: string
-): Promise<void>
+removeMaterial(objectName: string, materialName: string): Promise<void>
 ```
 
+#### Parameters
 
+| Name           | Type     | Required | Description                    |
+| -------------- | -------- | -------- | ------------------------------ |
+| `objectName`   | `string` | Yes      | Name of the object             |
+| `materialName` | `string` | Yes      | Name of the material to remove |
 
-<table><thead><tr><th>Parameters</th><th width="411">Description</th><th>Type</th></tr></thead><tbody><tr><td>objectName</td><td>The name of the object we want to delete the material from.</td><td><code>string</code></td></tr><tr><td>materialName</td><td>The name of the material we want to delete from the object.</td><td><code>string</code></td></tr></tbody></table>
+#### Returns
 
+`Promise<void>`
 
-
-Usage:
+#### Usage
 
 ```javascript
-await modelApi.removeMaterial('Adjustable Headband', 'Gold');
+await api.removeMaterial("Chair", "Old Material");
 ```
+
+#### Notes
+
+* Cannot remove the last material from an object
+* The material is only removed from this object, not deleted from the scene

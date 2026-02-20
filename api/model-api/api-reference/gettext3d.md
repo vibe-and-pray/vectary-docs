@@ -4,38 +4,52 @@ hidden: true
 
 # getText3d
 
-Retrieves the settings of a [3DText](../../../documentation/design-process/design-mode/3d-text.md) object.
+#### getText3d
+
+Returns the settings of a 3D Text object.
+
+#### Signature
 
 ```typescript
-getText3d(
-	objectName: string
-): Promise<Text3DNodeSettings>
+getText3d(name: string): Promise<Text3DNodeSettings | null>
 ```
 
-<table><thead><tr><th>Parameters</th><th width="318">Description</th><th>Type</th></tr></thead><tbody><tr><td>objectName</td><td>Specifies what 3d text object do we want to retrieve its settings from.</td><td><code>string</code></td></tr></tbody></table>
+#### Parameters
 
+| Name   | Type     | Required | Description                |
+| ------ | -------- | -------- | -------------------------- |
+| `name` | `string` | Yes      | Name of the 3D Text object |
 
+#### Returns
 
-Usage:
+`Promise<Text3DNodeSettings | null>` — Text settings, or `null` if object not found.
+
+```typescript
+type Text3DNodeSettings = {
+  text: string;
+  fontFamily: string;
+  fontSize: number;
+  weight: string;
+  distanceX: number;
+  distanceY: number;
+  textAlign: 'LEFT' | 'CENTER' | 'RIGHT' | 'JUSTIFY';
+  textHeight: 'DEFAULT' | 'CAMELCASE' | 'UPPERCASE' | 'LOWERCASE';
+  curveSegments: number;
+  amount: number;
+  contourOffset: number;
+};
+```
+
+#### Usage
 
 ```javascript
-await modelApi.getText3d('3D Text');
+const settings = await api.getText3d("3D Text");
+console.log(settings.text);      // "Example"
+console.log(settings.fontSize);  // 50
+console.log(settings.fontFamily); // "Open Sans"
 ```
 
-Return value:
+#### Notes
 
-```jsx
-{
-    "text": "Example",
-    "fontFamily": "Open Sans",
-    "fontSize": 50,
-    "weight": "regular",
-    "distanceX": 0,
-    "distanceY": 0,
-    "textAlign": "CENTER",
-    "textHeight": "DEFAULT",
-    "curveSegments": 5,
-    "contourOffset": 0
-    "amount": 15,
-}
-```
+* Returns `null` for non-existent objects
+* Throws error for non-3D-Text objects

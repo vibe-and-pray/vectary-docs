@@ -4,34 +4,52 @@ hidden: true
 
 # takeScreenshot
 
-This method generates a screenshot(image/png) of the current camera view with a height of 2160px, or you can specify your own, while preserving the aspect ratio of the current canvas. The return data is the [url from the generated image](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+### takeScreenshot
+
+Takes a screenshot of the current scene view.
+
+#### Signature
 
 ```typescript
-takeScreenshot(
-	height?: number
-): Promise<string>
+takeScreenshot(height?: number): Promise<string>
 ```
 
+#### Parameters
 
+| Parameter | Type   | Required | Description                           |
+| --------- | ------ | -------- | ------------------------------------- |
+| height    | number | No       | Image height in pixels. Default: 2160 |
 
-| Parameters | Description                               | Type     |
-| ---------- | ----------------------------------------- | -------- |
-| height     | The height which the screenshot will have | `number` |
+#### Returns
 
+`Promise<string>` — Base64 [data URL](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) (`data:image/png;base64,...`)
 
+#### Usage
 
-Usage:
+```javascript
+// Default size (2160px height)
+const dataUrl = await api.takeScreenshot();
 
-```jsx
-await modelApi.takeScreenshot(1024);
+// Custom height (width scales proportionally)
+const dataUrl = await api.takeScreenshot(1024);
+
+// Use in image element
+const img = document.createElement("img");
+img.src = dataUrl;
+document.body.appendChild(img);
+
+// Download as file
+const link = document.createElement("a");
+link.href = dataUrl;
+link.download = "screenshot.png";
+link.click();
+
+// Use with jsPDF
+pdf.addImage(dataUrl, "PNG", x, y, width, height);
 ```
 
+#### Notes
 
-
-Return value:
-
-```jsx
-"data:image/png;base64,<data>"
-```
-
-{% embed url="https://codesandbox.io/s/takescreenshot-pgy6gf?autoresize=1&expanddevtools=0&fontsize=14&hidenavigation=1&theme=dark&codemirror=1" fullWidth="true" %}
+* Returns **data URL string**, not Blob
+* Width is calculated automatically to preserve aspect ratio
+* Options object `{width, height, transparent}` does **NOT** work — use simple height parameter

@@ -4,24 +4,49 @@ hidden: true
 
 # exportFile
 
-Exports/downloads a 3D file of your [format’s](../type-definitions.md#export3dformats) choosing, of the current scene. [Options](../type-definitions.md#exportoptions) can be added.
+### exportFile
+
+Exports the current scene to a 3D file format. Triggers automatic download.
+
+#### Signature
 
 ```typescript
-exportFile(
-	format: Export3DFormats,
-	options?: ExportOptions
-): Promise<void>
+exportFile(format: Export3DFormats, options?: ExportOptions): Promise<void>
 ```
 
+#### Parameters
 
+| Parameter | Type            | Required | Description    |
+| --------- | --------------- | -------- | -------------- |
+| format    | Export3DFormats | Yes      | Output format  |
+| options   | ExportOptions   | No       | Export options |
 
-<table><thead><tr><th>Parameters</th><th width="228">Description</th><th>Type</th></tr></thead><tbody><tr><td>format</td><td>The 3D format file to <br>export the current scene.</td><td><a href="../type-definitions.md#export3dformats"><code>Export3DFormats</code></a></td></tr><tr><td>options</td><td></td><td><p></p><p><a href="../type-definitions.md#exportoptions"><code>ExportOptions</code></a></p><ul><li><code>fbx</code>: <code>'ASCII'</code>(default) | <code>'Binary'</code></li><li><code>applyParentMatrix</code>: <code>boolean</code></li><li><code>exportOnlyUsedUVs</code>: <code>boolean</code></li></ul></td></tr></tbody></table>
+```typescript
+type Export3DFormats = "OBJ" | "GLTF" | "GLB" | "DAE" | "USDZ" | "FBX" | "STL";
 
-
-
-Usage:
-
-```jsx
-await modelApi.exportFile('FBX', {fbx: 'Binary'});
+type ExportOptions = {
+  fbx?: "ASCII" | "Binary";  // Default: "ASCII"
+  applyParentMatrix?: boolean;
+  exportOnlyUsedUVs?: boolean;
+};
 ```
 
+#### Returns
+
+`Promise<void>` — File is automatically downloaded.
+
+#### Usage
+
+```javascript
+// Export as GLB
+await api.exportFile("GLB");
+
+// Export FBX as binary
+await api.exportFile("FBX", { fbx: "Binary" });
+```
+
+#### Notes
+
+* Triggers automatic file download in browser
+* Returns `void`, not a Blob
+* FBX defaults to ASCII format

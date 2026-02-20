@@ -4,34 +4,48 @@ hidden: true
 
 # getTextureData
 
-Retrieves the [TextureData](../type-definitions.md#texturedata) of specific [TextureConfig](../type-definitions.md#textureconfig) by its id.
+#### getTextureData
+
+Returns the raw image data of a texture.
+
+#### Signature
 
 ```typescript
-getTextureData(
-	textureId: string
-): Promise<TextureData>
+getTextureData(textureId: string): Promise<TextureData>
 ```
 
+#### Parameters
 
+| Name        | Type     | Required | Description       |
+| ----------- | -------- | -------- | ----------------- |
+| `textureId` | `string` | Yes      | ID of the texture |
 
-<table><thead><tr><th>Parameters</th><th width="411">Description</th><th>Type</th></tr></thead><tbody><tr><td>textureId</td><td>Id of a <a href="../type-definitions.md#textureconfig">TextureConfig</a> that can be retrieved from a <a href="../type-definitions.md#material">Material’s</a> specific texture channel.</td><td><code>string</code></td></tr></tbody></table>
+#### Returns
 
+`Promise<TextureData>` — Texture image data.
 
+```typescript
+type TextureData = {
+  image: ArrayBuffer;
+  width: number;
+  height: number;
+};
+```
 
-Usage:
+#### Usage
 
 ```javascript
-const mat = await api.getActiveMaterial('Box');
-const tid = mat.properties.colorConfig.texture.id;
-const textureData = await api.getTextureData(tid);
+// Get texture ID from material
+const material = await api.getActiveMaterial("Chair");
+const textureId = material.baseColor.textureConfig.id;
+
+// Get texture data
+const data = await api.getTextureData(textureId);
+console.log(`Size: ${data.width}x${data.height}`);
+console.log(`Bytes: ${data.image.byteLength}`);
 ```
 
-Return value:
+#### Notes
 
-```jsx
-{
-    "image": {ArrayBuffer},
-    "width": 2048,
-    "height": 2048
-}
-```
+* Texture ID can be found in material's texture channels (baseColor, roughness, normal, etc.)
+* Returns raw pixel data as ArrayBuffer

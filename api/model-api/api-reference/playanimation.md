@@ -4,22 +4,47 @@ hidden: true
 
 # playAnimation
 
-Plays the animation specified by its name.
+
+
+#### playAnimation
+
+
+
+Plays an animation.
+
+#### Signature
 
 ```typescript
-playAnimation(
-	animationName: string
-): Promise<void>
+playAnimation(name: string, options?: PlayOptions): Promise<void>
 ```
 
+#### Parameters
 
+| Parameter | Type        | Required | Description      |
+| --------- | ----------- | -------- | ---------------- |
+| name      | string      | Yes      | Animation name   |
+| options   | PlayOptions | No       | Playback options |
 
-<table><thead><tr><th width="215">Parameters</th><th>Description</th><th>Type</th></tr></thead><tbody><tr><td>animationName</td><td>Name of the animation we want to play.</td><td><code>string</code></td></tr></tbody></table>
+```typescript
+type PlayOptions = {
+  loop?: boolean;
+  reverse?: boolean;
+};
+```
 
+#### Returns
 
+`Promise<void>`
 
-Usage:
+#### Usage
 
-```jsx
-await modelApi.playAnimation('goUp');
+```javascript
+// Play once
+await api.playAnimation("Open");
+
+// Play in loop
+await api.playAnimation("Spin", { loop: true });
+
+// Play in reverse
+await api.playAnimation("Open", { reverse: true });
 ```

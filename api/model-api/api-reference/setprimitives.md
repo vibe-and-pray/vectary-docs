@@ -4,37 +4,64 @@ hidden: true
 
 # setPrimitives
 
-Applies new settings to a [Primitive](../../../documentation/design-process/design-mode/primitives.md) object, or the [Backdrop](../../../documentation/design-process/design-mode/setup/backdrop.md) object.
+#### setPrimitives
+
+Updates the settings of a primitive object.
+
+#### Signature
 
 ```typescript
 setPrimitives(
-	objectName: string,
-	primitiveSettings: PrimitiveNodeSettings
+  name: string, 
+  settings: Partial<PrimitiveNodeSettings>
 ): Promise<void>
 ```
 
-<table><thead><tr><th>Parameters</th><th width="318">Description</th><th>Type</th></tr></thead><tbody><tr><td>objectName</td><td>Specifies what object do we want to retrieve the information from.</td><td><code>string</code></td></tr><tr><td>primitiveSettings</td><td>New settings to be applied to the object.</td><td><a href="../type-definitions.md#primitivenodesettings">PrimitiveNodeSettings</a></td></tr></tbody></table>
+#### Parameters
 
+| Name       | Type                             | Required | Description                  |
+| ---------- | -------------------------------- | -------- | ---------------------------- |
+| `name`     | `string`                         | Yes      | Name of the primitive object |
+| `settings` | `Partial<PrimitiveNodeSettings>` | Yes      | Settings to update           |
 
+#### Returns
 
-Usage:
+`Promise<void>`
+
+#### Usage
 
 ```javascript
-await modelApi.setPrimitives('Box', {
-    boxDimensions: {
-        x: 100,
-        y: 100,
-        z: 200
-    },
-    boxSegments: {
-        x: 10,
-        y: 10,
-        z: 20
-    },
-    roundnessEnabled: true,
-    roundnessRadius: 8,
-    roundnessRadiusSegments: 8,
-    computeNormals: true
+// Change only box dimensions (other settings preserved)
+await api.setPrimitives("Box", {
+  boxDimensions: { x: 2, y: 1, z: 1.5 }
+});
+
+// Change only sphere radius
+await api.setPrimitives("Sphere", {
+  sphereRadius: 2.5
+});
+
+// Enable rounded corners on box
+await api.setPrimitives("Box", {
+  roundnessEnabled: true,
+  roundnessRadius: 0.2
+});
+
+// Set multiple properties
+await api.setPrimitives("Box", {
+  boxDimensions: { x: 1, y: 1, z: 1 },
+  boxSegments: { x: 2, y: 2, z: 2 },
+  roundnessEnabled: true,
+  roundnessRadius: 0.1,
+  roundnessRadiusSegments: 4,
+  computeNormals: true
 });
 ```
 
+#### Notes
+
+* Accepts `Partial<>` — only specify properties you want to change
+* Unspecified properties are preserved
+* Invalid properties are silently ignored
+* Values can be passed as numbers (converted to strings internally)
+* The object must be a primitive created in Studio

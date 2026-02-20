@@ -4,34 +4,61 @@ hidden: true
 
 # importFiles
 
-Imports a file or an array of files to be loaded to the scene. There are multiple ways that can be used to specify the source of the files.
+### importFiles
+
+Imports files into the current scene. Supports multiple input types.
+
+#### Signature
 
 ```typescript
-importFiles(
-	files: string | string[] | Blob | Blob[] | FileList
-): Promise<void>
+importFiles(files: string | string[] | Blob | Blob[] | FileList): Promise<void>
 ```
 
+#### Parameters
 
+| Parameter | Type                                                                                                                                                                     | Required | Description            |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- | ---------------------- |
+| files     | string \| string\[] \| [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) \| Blob\[] \| [FileList](https://developer.mozilla.org/en-US/docs/Web/API/FileList) | Yes      | Source files to import |
 
-<table><thead><tr><th width="140">Parameters</th><th width="443">Description</th><th>Type</th></tr></thead><tbody><tr><td>files</td><td><p>Defines the source files to be imported into the current scene.</p><p>Strings can be used to fetch URLs, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob">Blobs</a> can be used to pass down already available resources, and a <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileList">FileList</a> can be used to use local resources.</p><p>These are the file extensions that work out of the gate:</p><p>.zip (containing any of the following), .jpeg, .jpg, .png, .gif, .mp4, .json, .glb, .gltf, .fbx, .obj, .stl</p></td><td><code>string</code> | <code>string[]</code> | <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob"><code>Blob</code> | <code>Blob[]</code></a> | <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileList"><code>FileList</code></a></td></tr></tbody></table>
+**Supported input types:**
 
+* `string` — URL to fetch
+* `string[]` — Multiple URLs
+* `Blob` — Pre-fetched content
+* `Blob[]` — Multiple blobs
+* `FileList` — From `<input type="file">`
 
+**Supported formats:** .zip, .jpeg, .jpg, .png, .gif, .mp4, .json, .glb, .gltf, .fbx, .obj, .stl
 
-Usage:
+#### Returns
 
-```jsx
-// String for URL, fetching happens inside the function
-await modelApi.importFiles('URL');
+`Promise<void>`
 
-// Blob, pre-fetched content
-const blob = await fetch('URL').then(res => res.blob());
-await modelApi.importFiles(blob);
+#### Usage
 
-// FilesList from <input type="file">
+```javascript
+// From URL
+await api.importFiles("https://example.com/model.glb");
+
+// Multiple URLs
+await api.importFiles([
+  "https://example.com/model1.glb",
+  "https://example.com/model2.glb"
+]);
+
+// From Blob (pre-fetched)
+const blob = await fetch("https://example.com/model.glb").then(r => r.blob());
+await api.importFiles(blob);
+
+// From file input
 const input = document.querySelector('input[type="file"]');
-input.addEventListener('change', async () => {
-	await modelApi.importFiles(input.files);
-}
+input.addEventListener("change", async () => {
+  await api.importFiles(input.files);
+});
 ```
 
+#### Notes
+
+* Imported objects are added to the scene root
+* Returns `void`, not an array of imported objects
+* Use `getObjects()` after import to see new objects

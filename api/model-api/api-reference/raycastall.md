@@ -4,48 +4,61 @@ hidden: true
 
 # raycastAll
 
-Returns a [RayObjectHit](../type-definitions.md#rayobjecthit) of the first object that is intersected by the current mouse-cursor position, or the [Ray](../type-definitions.md#ray) if specified.
+### raycastAll
+
+Casts a ray and returns the first object hit. Uses current mouse position if no ray specified.
+
+#### Signature
 
 ```typescript
-raycastAll(
-	ray?: Ray
-): Promise<RayObjectHit | null>
+raycastAll(ray?: Ray): Promise<RayObjectHit | null>
 ```
 
+#### Parameters
 
+<table><thead><tr><th width="106.609375">Parameter</th><th width="130.35546875">Type</th><th width="124.78515625">Required</th><th>Description</th></tr></thead><tbody><tr><td>ray</td><td>Ray</td><td>No</td><td>Custom ray to cast. If omitted, uses current mouse cursor position.</td></tr></tbody></table>
 
-<table><thead><tr><th>Parameters</th><th width="411">Description</th><th>Type</th></tr></thead><tbody><tr><td>ray (optional)</td><td>A ray specifying how we should intersect with the objects.</td><td><a href="../type-definitions.md#ray"><code>Ray</code></a></td></tr></tbody></table>
-
-
-
-Usage:
-
-```jsx
-await modelApi.raycastAll();
+```typescript
+type Ray = {
+  start: Vector3;
+  direction: Vector3;
+};
 ```
 
+#### Returns
 
+`Promise<RayObjectHit | null>` — Hit information or `null` if no intersection.
 
-Return value:
+```typescript
+type RayObjectHit = {
+  id: string;        // Object UUID
+  name: string;      // Object name
+  position: Vector3; // World position of hit point
+  normal: Vector3;   // Surface normal at hit point
+  uv: Vector3;       // UV coordinates (z is always 0)
+};
+```
 
-```jsx
-{
-    "id": "5a9510cf-fa29-4c8b-9804-6cf6df6b43ee",
-    "name": "T-Shirt",
-    "position": {
-        "x": 37.350260811166834,
-        "y": -120.26830756045021,
-        "z": 363.7658504937014
-    },
-    "normal": {
-        "x": -0.022361778356376052,
-        "y": -0.9989480768854121,
-        "z": -0.03996635577118709
-    },
-    "uv": {
-        "x": 0.20498806490294819,
-        "y": 0.2775749847073309,
-        "z": 0
-    }
+#### Usage
+
+```javascript
+// Raycast from current mouse position
+const hit = await api.raycastAll();
+if (hit) {
+  console.log("Hit object:", hit.name);
+  console.log("Hit position:", hit.position);
 }
+
+// Raycast with custom ray
+const ray = {
+  start: { x: 0, y: -500, z: 100 },
+  direction: { x: 0, y: 1, z: 0 }
+};
+const hit = await api.raycastAll(ray);
 ```
+
+#### Notes
+
+* Returns **first hit object only**, not an array
+* Without ray parameter, uses current mouse cursor position over iframe
+* Returns `null` if ray doesn't hit any object

@@ -4,7 +4,7 @@ hidden: true
 
 # duplicateObjects
 
-Duplicates objects specified by name or id, names them, and places them into the scene hierarchy depending on the given options. Returns an array of the duplicated [`Objects`](../type-definitions.md#objects).
+Duplicates objects specified by name or id, names them, and places them into the scene hierarchy depending on the given options. Returns an array of the duplicated [`Objects`](/broken/pages/C6wJuaF0hYfBFP62i35x#objects).
 
 ```tsx
 duplicateObjects(

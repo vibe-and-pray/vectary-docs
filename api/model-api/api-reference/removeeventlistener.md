@@ -4,32 +4,63 @@ hidden: true
 
 # removeEventListener
 
-You can unsubscribe to any of the [ApiEvents](../type-definitions.md#api-events) you may have subscribed previously. If a previous `callback` function used when adding the event listener is sent, it will disconnect that specific event, otherwise it disconnects all listeners created with `eventName`
+
+
+#### removeEventListener
+
+
+
+Removes a previously registered event listener.
+
+<br>
+
+#### **Signature**
 
 ```typescript
-removeEventListener(
-		eventName: ApiEvents,
-		callback?: (result: EventResponses) => void
-): Promise<void>
+removeEventListener(eventName: string, callback?: (value: any) => void): Promise<void>
 ```
 
-| Parameters          | Description                                                                                                                                                                                                                                                                             |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| eventName           | <p><a href="removeeventlistener.md#api-events">ApiEvents</a><br>Name of the event listener the method will remove.</p>                                                                                                                                                                  |
-| callback (optional) | <p><code>(result:</code> <a href="removeeventlistener.md#event-responses"><code>EventResponses</code></a><code>) => void</code><br>Callback function which specifies the event you are unsubscribing to. If not used unsubscribes all listeners created with <code>eventName</code></p> |
 
-#### Usage:&#x20;
+
+#### **Parameters**
+
+| Parameter | Type     | Required | Description                                                                                 |
+| --------- | -------- | -------- | ------------------------------------------------------------------------------------------- |
+| eventName | string   | Yes      | Name of the event                                                                           |
+| callback  | function | No       | The callback function to remove. If not provided, removes all listeners for this event name |
+
+
+
+#### **Returns**
+
+`Promise<void>`
+
+
+
+#### **Usage**
 
 ```javascript
-modelApi.removeEventListener(
-		"configurator_state_change"
-);
+// Define callback as a named function
+const handleClick = (value) => {
+  console.log("Clicked:", value);
+};
+
+// Add listener
+await api.addEventListener("product_clicked", handleClick);
+
+// Remove specific listener
+await api.removeEventListener("product_clicked", handleClick);
+
+// Or remove ALL listeners for this event
+await api.removeEventListener("product_clicked");
 ```
 
 
 
-Example
+#### **Notes**
 
-{% embed url="https://codesandbox.io/s/add-removeeventlistener-ebeq4d?autoresize=1&expanddevtools=1&fontsize=14&hidenavigation=1&theme=dark&codemirror=1" fullWidth="true" %}
 
-&#x20;
+
+* To remove a specific listener, pass the exact same function reference used in `addEventListener()`
+* Anonymous functions cannot be removed individually — store the function in a variable first
+* Call without callback to remove all listeners for the given event name<br>

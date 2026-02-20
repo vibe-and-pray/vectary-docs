@@ -1,20 +1,6 @@
 ---
 description: All tutorials grouped by category.
 hidden: true
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: false
-  outline:
-    visible: true
-  pagination:
-    visible: false
-  metadata:
-    visible: true
 ---
 
 # Tutorials

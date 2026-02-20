@@ -4,33 +4,60 @@ hidden: true
 
 # setTextureData
 
-Sets the [TextureData](../type-definitions.md#texturedata) of a specific [TextureConfig](../type-definitions.md#textureconfig) by its id. A regular [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) can be passed down as well.
+#### setTextureData
+
+Replaces the image data of an existing texture.
+
+#### Signature
 
 ```typescript
-setTextureData(
-	textureId: string,
-	image: TextureData | Blob
-): Promise<void>
+setTextureData(textureId: string, image: TextureData | Blob): Promise<void>
 ```
 
+#### Parameters
 
+| Name        | Type                  | Required | Description                  |
+| ----------- | --------------------- | -------- | ---------------------------- |
+| `textureId` | `string`              | Yes      | ID of the texture to replace |
+| `image`     | `TextureData \| Blob` | Yes      | New image data               |
 
-<table><thead><tr><th>Parameters</th><th width="411">Description</th><th>Type</th></tr></thead><tbody><tr><td>textureId</td><td>Id of a <a href="../type-definitions.md#textureconfig">TextureConfig</a> that can be retrieved from a <a href="../type-definitions.md#material">Material’s</a> specific texture channel.</td><td><code>string</code></td></tr><tr><td>image</td><td>Object containing the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>, width and height of the texture to be set.</td><td><a href="../type-definitions.md#texturedata">TextureData</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob">Blob</a></td></tr></tbody></table>
+```typescript
+type TextureData = {
+  image: ArrayBuffer;
+  width: number;
+  height: number;
+};
+```
 
+#### Returns
 
+`Promise<void>`
 
-Usage:
+#### Usage
 
 ```javascript
-const mat = await api.getActiveMaterial('T-Shirt');
-const tid = mat.properties.color.id;
-const textureData = await api.setTextureData(
-	tid,
-	{
-		image: {ArrayBuffer}
-		width: 2048,
-		height: 2048,
-	}
-);
+// Get texture ID from material
+const material = await api.getActiveMaterial("T-Shirt");
+const textureId = material.baseColor.textureConfig.id;
+
+// Replace with TextureData (from canvas)
+const canvas = document.createElement('canvas');
+const ctx = canvas.getContext('2d');
+ctx.drawImage(img, 0, 0);
+const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+await api.setTextureData(textureId, {
+  image: imgData.data.buffer,
+  width: canvas.width,
+  height: canvas.height
+});
+
+// Or replace with Blob
+const blob = await fetch('image.png').then(r => r.blob());
+await api.setTextureData(textureId, blob);
 ```
 
+#### Notes
+
+* Replaces the texture in-place — changes are visible immediately
+* Accepts both TextureData object and Blob

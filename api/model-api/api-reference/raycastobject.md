@@ -4,49 +4,61 @@ hidden: true
 
 # raycastObject
 
-Returns a [RayObjectHit](../type-definitions.md#rayobjecthit) of an object if intersected by the current mouse-cursor position, or the [Ray](../type-definitions.md#ray) if specified.
+### raycastObject
+
+Casts a ray against a specific object. Uses current mouse position if no ray specified.
+
+#### Signature
 
 ```typescript
-raycastObject(
-	objectName: string,
-	ray?: Ray
-): Promise<RayObjectHit | null>
+raycastObject(name: string, ray?: Ray): Promise<RayObjectHit | null>
 ```
 
+#### Parameters
 
+<table><thead><tr><th width="155.421875">Parameter</th><th width="145.87890625">Type</th><th width="148.48828125">Required</th><th>Description</th></tr></thead><tbody><tr><td>name</td><td>string</td><td>Yes</td><td>Object name to test</td></tr><tr><td>ray</td><td>Ray</td><td>No</td><td>Custom ray to cast. If omitted, uses current mouse cursor position.</td></tr></tbody></table>
 
-<table><thead><tr><th>Parameters</th><th width="411">Description</th><th>Type</th></tr></thead><tbody><tr><td>objectName</td><td>The name of the object we want to get the intersection data from.</td><td><code>string</code></td></tr><tr><td>ray (optional)</td><td>A ray specifying how we should intersect with the objects.</td><td><a href="../type-definitions.md#ray"><code>Ray</code></a></td></tr></tbody></table>
-
-
-
-Usage:
-
-```jsx
-await modelApi.raycastObject('T-Shirt');
+```typescript
+type Ray = {
+  start: Vector3;
+  direction: Vector3;
+};
 ```
 
+#### Returns
 
+`Promise<RayObjectHit | null>` — Hit information or `null` if no intersection.
 
-Return value:
+```typescript
+type RayObjectHit = {
+  id: string;        // Object UUID
+  name: string;      // Object name
+  position: Vector3; // World position of hit point
+  normal: Vector3;   // Surface normal at hit point
+  uv: Vector3;       // UV coordinates (z is always 0)
+};
+```
 
-```jsx
-{
-    "id": "5a9510cf-fa29-4c8b-9804-6cf6df6b43ee",
-    "name": "T-Shirt",
-    "position": {
-        "x": 37.350260811166834,
-        "y": -120.26830756045021,
-        "z": 363.7658504937014
-    },
-    "normal": {
-        "x": -0.022361778356376052,
-        "y": -0.9989480768854121,
-        "z": -0.03996635577118709
-    },
-    "uv": {
-        "x": 0.20498806490294819,
-        "y": 0.2775749847073309,
-        "z": 0
-    }
+#### Usage
+
+```javascript
+// Raycast specific object from mouse position
+const hit = await api.raycastObject("Chair");
+if (hit) {
+  console.log("Hit at:", hit.position);
 }
+
+// Raycast with custom ray
+const ray = {
+  start: { x: 0, y: -500, z: 100 },
+  direction: { x: 0, y: 1, z: 0 }
+};
+const hit = await api.raycastObject("Chair", ray);
 ```
+
+#### Notes
+
+* Tests only the specified object, ignores others
+* Ray parameter is **optional** (uses mouse position if omitted)
+* Returns `null` if ray doesn't hit the object
+* Useful for detecting clicks on specific objects

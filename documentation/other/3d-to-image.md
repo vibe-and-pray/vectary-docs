@@ -3,20 +3,6 @@ description: >-
   AI-based feature for generating images using a combination of 3D canvas
   content, optional reference images, and a text prompt.
 icon: sparkles
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # 3D to image (GenAI)

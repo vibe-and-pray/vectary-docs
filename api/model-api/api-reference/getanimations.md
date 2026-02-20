@@ -4,28 +4,33 @@ hidden: true
 
 # getAnimations
 
-Returns a list of names of all the animations in the project.
+
+
+#### getAnimations
+
+
+
+Returns a list of all animations in the scene.
+
+
+
+#### Signature
 
 ```typescript
 getAnimations(): Promise<string[]>
 ```
 
+#### Parameters
 
+None.
 
-Usage:
+#### Returns
 
-```jsx
-await modelApi.getAnimations();
-```
+`Promise<string[]>` — Array of animation names.
 
+#### Usage
 
-
-Return value:
-
-```jsx
-[
-    "360 rotation",
-    "Knob explode",
-    "Sole layers"
-]
+```javascript
+const animations = await api.getAnimations();
+console.log(animations); // ["Open", "Close", "Spin"]
 ```

@@ -4,28 +4,56 @@ hidden: true
 
 # projectInfo
 
-Returns some basic information about the model: `ProjectInfo`
+#### projectInfo
+
+
+
+Returns information about the current project.
+
+
+
+#### Signature
 
 ```typescript
 projectInfo(): Promise<ProjectInfo>
 ```
 
-Usage:
+#### Parameters
 
-```javascript
-await modelApi.projectInfo();
+
+
+None.
+
+
+
+#### Returns
+
+`Promise<ProjectInfo>` — Object containing project details:
+
+```typescript
+type ProjectInfo = {
+  projectName: string;
+  modelId: string;
+  modelIdBase62: string;
+  publishedId: string;
+  workspaceId: string;
+}
 ```
 
-Return value example:
+| Property      | Type   | Description                    |
+| ------------- | ------ | ------------------------------ |
+| projectName   | string | Name of the project            |
+| modelId       | string | Unique model identifier (UUID) |
+| modelIdBase62 | string | Model ID in Base62 format      |
+| publishedId   | string | Published version identifier   |
+| workspaceId   | string | Workspace identifier           |
+
+#### Usage
 
 ```javascript
-{
-    "projectName": "Goggles AR",
-    "modelId": "7bcf5c5e-8b16-4dc8-897f-a7965bae9aaa",
-    "modelIdBase62": "3lcorX14cyHmKcW3LNr66s",
-    "publishedId": "e63ae0af-53a5-4087-af83-d4ed36c8a46e",
-    "workspaceId": "d8909d2c-feec-443d-891f-f42fce66bca4"
-}
+const info = await api.projectInfo();
+console.log(info.projectName);
+console.log(info.modelId);
 ```
 
 

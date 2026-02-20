@@ -4,26 +4,35 @@ hidden: true
 
 # setScale
 
-Sets the scale of an object base on given x, y, z values.
+#### setScale
+
+Sets the scale of an object.
+
+#### Signature
 
 ```typescript
-setScale(
-	objectName: string,
-	scale: Vector3,
-): Promise<void>
+setScale(objectName: string, scale: Vector3): Promise<void>
 ```
 
-<table><thead><tr><th>Parameters</th><th width="318">Description</th><th>Type</th></tr></thead><tbody><tr><td>objectName</td><td>Specifies what object do we want to retrieve the information from.</td><td><code>string</code></td></tr><tr><td>scale</td><td>x, y, z values of the new scale.</td><td><a href="../type-definitions.md#vector3"><code>Vector3</code></a></td></tr></tbody></table>
+#### Parameters
 
+<table><thead><tr><th width="194.44921875">Name</th><th width="144.515625">Type</th><th width="121.58984375">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>objectName</code></td><td><code>string</code></td><td>Yes</td><td>Object name</td></tr><tr><td><code>scale</code></td><td><a href="https://help.vectary.com/api/model-api-new/api-reference-new#vector3">Vector3</a></td><td>Yes</td><td>New scale <code>{x, y, z}</code></td></tr></tbody></table>
 
+#### Returns
 
-Usage:
+`Promise<void>`
+
+#### Usage
 
 ```javascript
-await modelApi.setScale('Box', {
-	x: 1.5, 
-	y: 2, 
-	z: 1
-});
+// Uniform scale (2x bigger)
+await api.setScale("Chair", { x: 2, y: 2, z: 2 });
+
+// Non-uniform scale
+await api.setScale("Chair", { x: 1, y: 2, z: 1 });
 ```
 
+#### Notes
+
+* **Important:** Always provide all three coordinates (x, y, z). Missing values default to `0.001`, not preserved
+* Only accepts string name, not array

@@ -4,23 +4,37 @@ hidden: true
 
 # rotateEnvironmentMap
 
-Rotates the environment by a specified number of degrees.
+
+
+Rotates the HDRI environment map.
+
+#### Signature
 
 ```typescript
-rotateEnvironmentMap(
-	degrees: number
-): Promise<void>
+rotateEnvironmentMap(degrees: number): Promise<void>
 ```
 
+#### Parameters
 
+| Parameter | Type   | Required | Description               |
+| --------- | ------ | -------- | ------------------------- |
+| degrees   | number | Yes      | Rotation angle in degrees |
 
-<table><thead><tr><th width="215">Parameters</th><th>Description</th><th>Type</th></tr></thead><tbody><tr><td>degrees</td><td>New rotation in degrees of the environment map.</td><td><code>number</code></td></tr></tbody></table>
+#### Returns
 
+`Promise<void>`
 
+#### Usage
 
-Usage:
+```javascript
+// Rotate 90 degrees
+await api.rotateEnvironmentMap(90);
 
-```jsx
-await modelApi.init();
+// Rotate 180 degrees
+await api.rotateEnvironmentMap(180);
 ```
 
+#### Notes
+
+* Affects the lighting and reflections in the scene
+* Value is absolute rotation, not relative
