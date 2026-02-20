@@ -326,7 +326,7 @@ type TextureConfig<T> = {
 
 <details open>
 
-<summary></summary>
+<summary>TextureFilterSettings</summary>
 
 ```
 type TextureFilterSettings = {
@@ -342,7 +342,7 @@ type TextureFilterSettings = {
 
 <details open>
 
-<summary></summary>
+<summary>TextureMapSettings</summary>
 
 ```
 type TextureMapSettings = {
@@ -358,7 +358,7 @@ type TextureMapSettings = {
 
 <details open>
 
-<summary></summary>
+<summary>WrapMode</summary>
 
 ```
 enum WrapMode {
