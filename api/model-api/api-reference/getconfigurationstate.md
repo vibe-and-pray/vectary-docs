@@ -32,7 +32,7 @@ None.
 
 `Promise<ConfigurationState[]>` — Array of variant and material states.
 
-See [ConfigurationState](https://help.vectary.com/api/model-api-new/api-reference-new#configurationstate) in Common Types.
+See [ConfigurationState](./#configurationstate) in Common Types.
 
 
 
