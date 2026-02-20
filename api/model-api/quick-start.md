@@ -105,7 +105,7 @@ Open your browser's console - you should see "API ready!" once the model loads.
 
 
 
-The API provides many methods to control the scene (see the full list in the [<mark style="color:blue;">API Reference</mark>](/broken/pages/o8PzQeLFkfMmmzdiqalR)). Here's a simple example to get you started:
+The API provides many methods to control the scene (see the full list in the [<mark style="color:blue;">API Reference</mark>](api-reference/)). Here's a simple example to get you started:
 
 ```html
 <script type="module">
@@ -218,6 +218,6 @@ Here's a full working example that lists all objects in the scene:
 
 
 * [<mark style="color:blue;">**Core Concepts**</mark>](core-concepts.md) - understand Variants, Materials, Events, and Variables
-* [<mark style="color:blue;">**API Reference**</mark>](/broken/pages/o8PzQeLFkfMmmzdiqalR) - explore all available methods
-* [<mark style="color:blue;">**Ecommerce**</mark>](/broken/pages/JYePpe7VcUxPGWtUMf3p) - see integration patterns for online stores
+* [<mark style="color:blue;">**API Reference**</mark>](api-reference/) - explore all available methods
+* [<mark style="color:blue;">**Ecommerce**</mark>](ecommerce/) - see integration patterns for online stores
 

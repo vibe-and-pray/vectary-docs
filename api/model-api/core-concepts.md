@@ -212,6 +212,6 @@ All communication goes through Interactions:
 
 
 
-* [<mark style="color:blue;">**API Reference**</mark>](/broken/pages/o8PzQeLFkfMmmzdiqalR) - explore all available methods
-* [<mark style="color:blue;">**Ecommerce**</mark>](/broken/pages/JYePpe7VcUxPGWtUMf3p) - see integration patterns for online stores
+* [<mark style="color:blue;">**API Reference**</mark>](api-reference/) - explore all available methods
+* [<mark style="color:blue;">**Ecommerce**</mark>](ecommerce/) - see integration patterns for online stores
 
