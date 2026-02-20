@@ -29,7 +29,7 @@ getRotation(objectName: string): Promise<Euler>
 * `x`, `y`, `z` — rotation angles in **degrees**
 * `order` — rotation order (e.g., `"XYZ"`)
 
-See [Euler](https://help.vectary.com/api/model-api-new/api-reference-new#euler) in Common Types.\
+See [Euler](./#euler) in Common Types.\
 <br>
 
 #### Usage

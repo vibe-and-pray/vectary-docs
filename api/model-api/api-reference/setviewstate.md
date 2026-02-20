@@ -16,10 +16,10 @@ setViewState(state: CameraViewState, duration?: number): Promise<void>
 
 #### Parameters
 
-| Name       | Type                                                                                            | Required | Description                        |
-| ---------- | ----------------------------------------------------------------------------------------------- | -------- | ---------------------------------- |
-| `state`    | [CameraViewState](https://help.vectary.com/api/model-api-new/api-reference-new#cameraviewstate) | Yes      | New camera state                   |
-| `duration` | `number`                                                                                        | No       | Animation duration in milliseconds |
+| Name       | Type                                  | Required | Description                        |
+| ---------- | ------------------------------------- | -------- | ---------------------------------- |
+| `state`    | [CameraViewState](./#cameraviewstate) | Yes      | New camera state                   |
+| `duration` | `number`                              | No       | Animation duration in milliseconds |
 
 #### Returns
 

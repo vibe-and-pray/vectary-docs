@@ -26,7 +26,7 @@ addOrEditMaterial(
 | `material`   | `Material` | Yes      | Material properties (must include `name`)          |
 | `isActive`   | `boolean`  | No       | Whether to set as active material. Default: `true` |
 
-See [Material](https://help.vectary.com/api/model-api-new/api-reference-new#material) in Common Types.
+See [Material](./#material) in Common Types.
 
 #### Returns
 

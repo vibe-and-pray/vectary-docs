@@ -24,7 +24,7 @@ getActiveMaterial(objectName: string): Promise<Material>
 
 `Promise<Material>` — The active material with full properties.
 
-See [Material](https://help.vectary.com/api/model-api-new/api-reference-new#material) in Common Types.
+See [Material](./#material) in Common Types.
 
 #### Usage
 

@@ -23,7 +23,7 @@ getScale(objectName: string): Promise<Vector3>
 #### Returns
 
 `Promise<Vector3>` — Object scale as `{x, y, z}`.\
-See [Vector3](https://help.vectary.com/api/model-api-new/api-reference-new#vector3) in Common Types.<br>
+See [Vector3](./#vector3) in Common Types.<br>
 
 #### Usage
 

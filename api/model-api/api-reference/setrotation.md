@@ -20,7 +20,7 @@ setRotation(objectName: string, rotation: Euler): Promise<void>
 
 #### Parameters
 
-<table><thead><tr><th width="166.328125">Name</th><th width="136.90625">Type</th><th width="115.171875">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>objectName</code></td><td><code>string</code></td><td>Yes</td><td>Object name</td></tr><tr><td><code>rotation</code></td><td><a href="https://help.vectary.com/api/model-api-new/api-reference-new#euler">Euler</a></td><td>Yes</td><td>New rotation <code>{x, y, z}</code> in degrees. Optional <code>order</code> field.</td></tr></tbody></table>
+<table><thead><tr><th width="166.328125">Name</th><th width="136.90625">Type</th><th width="115.171875">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>objectName</code></td><td><code>string</code></td><td>Yes</td><td>Object name</td></tr><tr><td><code>rotation</code></td><td><a href="./#euler">Euler</a></td><td>Yes</td><td>New rotation <code>{x, y, z}</code> in degrees. Optional <code>order</code> field.</td></tr></tbody></table>
 
 #### Returns
 

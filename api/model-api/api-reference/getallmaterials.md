@@ -22,7 +22,7 @@ None.
 
 `Promise<Material[]>` — Array of all materials in the scene.
 
-See [Material](https://help.vectary.com/api/model-api-new/api-reference-new#material) in Common Types.
+See [Material](./#material) in Common Types.
 
 #### Usage
 

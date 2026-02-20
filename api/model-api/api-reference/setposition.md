@@ -19,7 +19,7 @@ setPosition(objectName: string, position: Vector3): Promise<void>
 
 #### Parameters
 
-<table><thead><tr><th width="181.6015625">Name</th><th width="155.40625">Type</th><th width="160.15625">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>objectName</code></td><td><code>string</code></td><td>Yes</td><td>Object name</td></tr><tr><td><code>position</code></td><td><a href="https://help.vectary.com/api/model-api-new/api-reference-new#vector3">Vector3</a></td><td>Yes</td><td>New position <code>{x, y, z}</code></td></tr></tbody></table>
+<table><thead><tr><th width="181.6015625">Name</th><th width="155.40625">Type</th><th width="160.15625">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>objectName</code></td><td><code>string</code></td><td>Yes</td><td>Object name</td></tr><tr><td><code>position</code></td><td><a href="./#vector3">Vector3</a></td><td>Yes</td><td>New position <code>{x, y, z}</code></td></tr></tbody></table>
 
 
 

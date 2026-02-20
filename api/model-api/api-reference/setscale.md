@@ -16,7 +16,7 @@ setScale(objectName: string, scale: Vector3): Promise<void>
 
 #### Parameters
 
-<table><thead><tr><th width="194.44921875">Name</th><th width="144.515625">Type</th><th width="121.58984375">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>objectName</code></td><td><code>string</code></td><td>Yes</td><td>Object name</td></tr><tr><td><code>scale</code></td><td><a href="https://help.vectary.com/api/model-api-new/api-reference-new#vector3">Vector3</a></td><td>Yes</td><td>New scale <code>{x, y, z}</code></td></tr></tbody></table>
+<table><thead><tr><th width="194.44921875">Name</th><th width="144.515625">Type</th><th width="121.58984375">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>objectName</code></td><td><code>string</code></td><td>Yes</td><td>Object name</td></tr><tr><td><code>scale</code></td><td><a href="./#vector3">Vector3</a></td><td>Yes</td><td>New scale <code>{x, y, z}</code></td></tr></tbody></table>
 
 #### Returns
 

@@ -28,7 +28,7 @@ getPosition(objectName: string): Promise<Vector3>
 
 `Promise<Vector3>` — Object position as `{x, y, z}`.\
 \
-See [Vector3](https://help.vectary.com/api/model-api-new/api-reference-new#vector3) in Common Types.
+See [Vector3](./#vector3) in Common Types.
 
 #### Usage
 

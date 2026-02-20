@@ -32,7 +32,7 @@ getObjects(objectNamesOrIds?: string | string[]): Promise<Object[]>
 
 `Promise<Object[]>` — Array of matching objects.
 
-See [Object](https://help.vectary.com/api/model-api-new/api-reference#object) in Common Types.
+See [Object](./#object) in Common Types.
 
 
 

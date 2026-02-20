@@ -4,7 +4,7 @@ hidden: true
 
 # getHoveredObjects
 
-Returns an array of [`Objects`](/broken/pages/C6wJuaF0hYfBFP62i35x#objects) that are intersecting with the cursor.
+Returns an array of [`Objects`](./#object) that are intersecting with the cursor.
 
 ```typescript
 getHoveredObjects(): Promise<Object[]>

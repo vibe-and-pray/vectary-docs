@@ -21,7 +21,7 @@ None.
 #### Returns
 
 `Promise<CameraViewState>` — Current camera state. \
-See [CameraViewState](https://help.vectary.com/api/model-api-new/api-reference-new#cameraviewstate) in Common Types.
+See [CameraViewState](./#cameraviewstate) in Common Types.
 
 #### Usage
 
