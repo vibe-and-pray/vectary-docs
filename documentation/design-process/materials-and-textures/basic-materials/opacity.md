@@ -17,7 +17,7 @@ The **Invert** option reverses the texture colors, turning white into black and 
 
 * Linear gradient — HEX, RGB
 * Radial gradient — HEX, RGB
-* Texture — JPG, PNG, SVG
+* Texture — JPG, PNG, SVG, WebP
 * Animation — Lottie, GIF, MP4
 * Figma frame — [figma-frames-import.md](../../../importing/figma-frames-import.md "mention")
 

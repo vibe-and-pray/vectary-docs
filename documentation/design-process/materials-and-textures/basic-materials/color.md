@@ -7,7 +7,7 @@ Determines the base color of a material. It can be set using a solid color, grad
 * Solid — HEX&#x20;
 * Linear gradient — HEX, RGB
 * Radial gradient — HEX, RGB
-* Texture — JPG, PNG, SVG
+* Texture — JPG, PNG, SVG, WebP
 * Animation — Lottie, GIF, MP4
 * Figma frame — [figma-frames-import.md](../../../importing/figma-frames-import.md "mention")
 

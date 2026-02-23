@@ -14,8 +14,8 @@ Hotspots are always camera-facing, maintaining clear visibility from any viewing
 
 Supported content types:<br>
 
-* Static images (JPG, PNG, SVG)
-* Animated assets (GIF, MP4, Lottie)
+* Static images - `JPG`, `PNG`, `SVG`, `WebP`
+* Animated assets - `GIF`, `MP4`, `Lottie`
 * [figma-frames-import.md](../importing/figma-frames-import.md "mention")
 
 

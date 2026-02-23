@@ -8,13 +8,13 @@
 
 Boolean modifier performs operations between multiple objects to create complex shapes. The bottom object in the list acts as the main object, while all other objects above it participate in the operation with the main object.
 
-<figure><img src="../../../../.gitbook/assets/image (382).png" alt="" width="563"><figcaption></figcaption></figure>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (382).png" alt="" width="563"><figcaption></figcaption></figure></div>
 
 
 
 Each participating object has an icon next to it that determines which of the three operations will be performed: **union**, **subtract**, or **intersect**. This means that the main object can have different types of operations with different objects simultaneously.
 
-<figure><img src="../../../../.gitbook/assets/image (383).png" alt="" width="366"><figcaption><p>to change the operation type, click on the icon</p></figcaption></figure>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (383).png" alt="" width="366"><figcaption><p>to change the operation type, click on the icon</p></figcaption></figure></div>
 
 
 
@@ -35,25 +35,6 @@ Enabling this option ensures that each object involved in the Boolean operation 
 {% hint style="info" %}
 When this option is enabled, converting to geometry preserves the number of objects involved in the operation. If disabled, the conversion results in a single object.
 {% endhint %}
-
-
-
-
-
-### Boolean Animation Limitations
-
-
-
-{% hint style="warning" %}
-#### Limitation
-
-
-
-* Animation and transformation of **objects** under a Boolean modifier are visible only in the Shared version of the project. In the Preview version, this does not work.<br>
-* Animation of **Boolean operations** is not supported. It works in the Preview version but is not functional in the Shared version.
-{% endhint %}
-
-
 
 
 

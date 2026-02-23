@@ -49,9 +49,13 @@ Once placed, decals can be resized or rotated using the Gizmo
 
 
 * A decal is a regular 3D object with the same properties, including full control over materials, textures, and other 3D object settings.
-* **Offset** — available after a decal is attached to an object; shifts the decal away from the surface to prevent flickering caused by overlapping geometry.\
+* **Offset** - available after a decal is attached to an object; shifts the decal away from the surface to prevent flickering caused by overlapping geometry.\
   \
-  ![](<../../.gitbook/assets/image (521).png>)
+  ![](<../../.gitbook/assets/image (1).png>)
+
+
+
+* **Use projection decals -** projects the decal texture straight onto the surface rather than wrapping it around the geometry. Produces cleaner results on flat areas but may clip on complex shapes.<br>
 
 
 
@@ -65,7 +69,7 @@ Selecting the same texture in the [Emission](materials-and-textures/basic-materi
 
 
 
-* Decals can also be imported directly from Figma — [figma-frames-import.md](../importing/figma-frames-import.md "mention")
+* Decals can also be imported directly from Figma - [figma-frames-import.md](../importing/figma-frames-import.md "mention")
 * Any changes made in Figma can be updated in Vectary Studio with just one click
 
 

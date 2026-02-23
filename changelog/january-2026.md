@@ -52,7 +52,7 @@
 * We’ve added a **Scale factor** parameter that makes it easier to adjust an object’s scale for AR and during export.\
   Instead of resizing the entire project to match the desired real-world size in augmented reality, you can now simply specify how much larger or smaller the object should be as a percentage.\
   \
-  ![](../.gitbook/assets/image.png)
+  ![](<../.gitbook/assets/image (2).png>)
 {% endhint %}
 {% endtab %}
 {% endtabs %}

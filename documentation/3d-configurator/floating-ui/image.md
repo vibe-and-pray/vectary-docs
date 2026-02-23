@@ -11,7 +11,7 @@ The **Image** UI element supports displaying static images, animated images, and
 
 
 * **Animated:** Lottie, GIF, MP4
-* **Static:** PNG, JPG, SVG
+* **Static:** PNG, JPG, SVG, WebP
 * **Figma frames:** [figma-frames-import.md](../../importing/figma-frames-import.md "mention")
 
 

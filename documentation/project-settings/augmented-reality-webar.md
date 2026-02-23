@@ -83,7 +83,7 @@ Entry into AR experience can be triggered by any 3D object or UI element using t
 {% endtab %}
 
 {% tab title="Behavior" %}
-<div align="left"><figure><img src="../../.gitbook/assets/image (2).png" alt="" width="563"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="563"><figcaption></figcaption></figure></div>
 
 **`10`** - **Units** - define [units](../getting-started/units.md) of measurement for generated AR files
 
