@@ -1,10 +1,8 @@
 # February 2026
 
-
+.
 
 ### February 20
-
-
 
 
 
