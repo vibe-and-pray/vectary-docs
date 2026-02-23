@@ -1,6 +1,6 @@
 # February 2026
 
-.
+
 
 ### February 20
 
@@ -13,7 +13,7 @@
 
 
 
-* Added new **Projection** type for applying [**Decals**](../documentation/design-process/decals.md) to objects
+* Added new `Projection` type for applying [**Decals**](../documentation/design-process/decals.md) to objects
 * Added support for importing `WebP` format
 * Improved [**Boolean**](../documentation/design-process/design-mode/modifiers/boolean.md) modifier: now supports animations and dynamic changes in the viewer
 {% endhint %}
@@ -48,7 +48,7 @@
 
 
 
-* We added a new **Projection** mode for [**Decals**](../documentation/design-process/decals.md) - an alternative to the default wrapping method that projects the texture straight onto the surface. Try both and see which works better for your specific geometry.
+* We added a new `Projection` type for [**Decals**](../documentation/design-process/decals.md) - an alternative to the default wrapping method that projects the texture straight onto the surface. Try both and see which works better for your specific geometry.
 {% endhint %}
 {% endtab %}
 {% endtabs %}
