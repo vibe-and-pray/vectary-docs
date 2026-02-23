@@ -13,9 +13,9 @@
 
 
 
+* Improved [**Boolean**](../documentation/design-process/design-mode/modifiers/boolean.md) modifier: now supports animations and dynamic changes in the viewer
 * Added new `Projection` type for applying [**Decals**](../documentation/design-process/decals.md) to objects
 * Added support for importing `WebP` format
-* Improved [**Boolean**](../documentation/design-process/design-mode/modifiers/boolean.md) modifier: now supports animations and dynamic changes in the viewer
 {% endhint %}
 {% endtab %}
 
