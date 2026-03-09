@@ -24,7 +24,7 @@ createCone(options?: CreatePrimitiveOptions): Promise<SceneObject>
 
 #### Parameters
 
-<table><thead><tr><th width="132.8828125">Parameter</th><th width="226.24609375">Type</th><th width="99.40234375">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>options</code></td><td><a href="./#createprimitiveoptions"><code>CreatePrimitiveOptions</code></a></td><td>No</td><td>Transform and primitive-specific settings</td></tr></tbody></table>
+<table><thead><tr><th width="132.8828125">Parameter</th><th width="226.24609375">Type</th><th width="99.40234375">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>options</code></td><td><a href="./#createprimitiveoptions"><mark style="color:blue;"><code>CreatePrimitiveOptions</code></mark></a></td><td>No</td><td>Transform and primitive-specific settings</td></tr></tbody></table>
 
 
 

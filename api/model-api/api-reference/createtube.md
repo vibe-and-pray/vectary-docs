@@ -22,7 +22,7 @@ createTube(options?: CreatePrimitiveOptions): Promise<SceneObject>
 
 #### Parameters
 
-<table><thead><tr><th width="141.68359375">Parameter</th><th width="218.48828125">Type</th><th width="85.69140625">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>options</code></td><td><a href="./#createprimitiveoptions"><code>CreatePrimitiveOptions</code></a></td><td>No</td><td>Transform and primitive-specific settings</td></tr></tbody></table>
+<table><thead><tr><th width="141.68359375">Parameter</th><th width="218.48828125">Type</th><th width="85.69140625">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>options</code></td><td><a href="./#createprimitiveoptions"><mark style="color:blue;"><code>CreatePrimitiveOptions</code></mark></a></td><td>No</td><td>Transform and primitive-specific settings</td></tr></tbody></table>
 
 
 

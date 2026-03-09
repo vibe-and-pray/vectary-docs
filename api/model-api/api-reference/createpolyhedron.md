@@ -20,7 +20,7 @@ createPolyhedron(options?: CreatePrimitiveOptions): Promise<SceneObject>
 
 #### Parameters
 
-<table><thead><tr><th width="120.51171875">Parameter</th><th width="223.328125">Type</th><th width="75.67578125">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>options</code></td><td><a href="./#createprimitiveoptions"><code>CreatePrimitiveOptions</code></a></td><td>No</td><td>Transform and primitive-specific settings</td></tr></tbody></table>
+<table><thead><tr><th width="120.51171875">Parameter</th><th width="223.328125">Type</th><th width="75.67578125">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>options</code></td><td><a href="./#createprimitiveoptions"><mark style="color:blue;"><code>CreatePrimitiveOptions</code></mark></a></td><td>No</td><td>Transform and primitive-specific settings</td></tr></tbody></table>
 
 #### PrimitivePolyhedronSettings fields
 

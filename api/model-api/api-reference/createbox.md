@@ -22,7 +22,7 @@ createBox(options?: CreatePrimitiveOptions): Promise<SceneObject>
 
 #### Parameters
 
-<table><thead><tr><th width="121.6875">Parameter</th><th width="226.8046875">Type</th><th width="84.25">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>options</code></td><td><a href="./#createprimitiveoptions"><code>CreatePrimitiveOptions</code></a></td><td>No</td><td>Transform and primitive-specific settings</td></tr></tbody></table>
+<table><thead><tr><th width="121.6875">Parameter</th><th width="226.94140625">Type</th><th width="84.25">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>options</code></td><td><a href="./#createprimitiveoptions"><mark style="color:blue;"><code>CreatePrimitiveOptions</code></mark></a></td><td>No</td><td>Transform and primitive-specific settings</td></tr></tbody></table>
 
 
 
