@@ -30,7 +30,7 @@ None.
 
 #### Returns
 
-`Promise<void>` — Resolves when the connection is established and the model is ready.
+`Promise<void>` - Resolves when the connection is established and the model is ready.
 
 
 

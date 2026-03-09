@@ -28,7 +28,7 @@ None.
 
 #### **Returns**
 
-`Promise<void>` — Resolves when the API is ready.
+`Promise<void>` - Resolves when the API is ready.
 
 
 
@@ -47,7 +47,7 @@ await api.isReady();
 
 
 
-* Works similarly to `init()` — both wait for the API to be ready
+* Works similarly to `init()` - both wait for the API to be ready
 * Can be called multiple times safely
 
 

@@ -18,9 +18,7 @@ setConfigurationState(
 
 
 
-| Parameters | Description                                                                                                                                                                                                                                                                                                           |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| state      | <p><code>Array&#x3C;ConfigurationState></code><br><br>An array with different states for <a href="../../../documentation/3d-configurator/variants.md"><code>VariantSwitcherData</code></a> and <a href="../../../documentation/3d-configurator/floating-ui/materials-ui.md"><code>MaterialSwitcherData</code></a></p> |
+<table><thead><tr><th width="230.69140625">Parameters</th><th>Description</th></tr></thead><tbody><tr><td>state</td><td><code>Array&#x3C;ConfigurationState></code><br><br>An array with different states for <a href="../../../documentation/3d-configurator/variants.md"><code>VariantSwitcherData</code></a> and <a href="../../../documentation/3d-configurator/floating-ui/materials-ui.md"><code>MaterialSwitcherData</code></a></td></tr></tbody></table>
 
 
 

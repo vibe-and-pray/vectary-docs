@@ -18,9 +18,7 @@ getRotation(objectName: string): Promise<Euler>
 
 #### Parameters
 
-| Name         | Type     | Required | Description |
-| ------------ | -------- | -------- | ----------- |
-| `objectName` | `string` | Yes      | Object name |
+<table><thead><tr><th>Name</th><th>Type</th><th width="172.76953125">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>objectName</code></td><td><code>string</code></td><td>Yes</td><td>Object name</td></tr></tbody></table>
 
 #### Returns
 

@@ -6,7 +6,11 @@ hidden: true
 
 #### setPrimitives
 
+
+
 Updates the settings of a primitive object.
+
+
 
 #### Signature
 
@@ -17,16 +21,19 @@ setPrimitives(
 ): Promise<void>
 ```
 
+
+
 #### Parameters
 
-| Name       | Type                             | Required | Description                  |
-| ---------- | -------------------------------- | -------- | ---------------------------- |
-| `name`     | `string`                         | Yes      | Name of the primitive object |
-| `settings` | `Partial<PrimitiveNodeSettings>` | Yes      | Settings to update           |
+<table><thead><tr><th width="108.9609375">Name</th><th width="285.45703125">Type</th><th width="91.51953125">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code></td><td><code>string</code></td><td>Yes</td><td>Name of the primitive object</td></tr><tr><td><code>settings</code></td><td><code>Partial&#x3C;PrimitiveNodeSettings></code></td><td>Yes</td><td>Settings to update</td></tr></tbody></table>
 
 #### Returns
 
+
+
 `Promise<void>`
+
+
 
 #### Usage
 

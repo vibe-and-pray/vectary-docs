@@ -24,10 +24,7 @@ removeEventListener(eventName: string, callback?: (value: any) => void): Promise
 
 #### **Parameters**
 
-| Parameter | Type     | Required | Description                                                                                 |
-| --------- | -------- | -------- | ------------------------------------------------------------------------------------------- |
-| eventName | string   | Yes      | Name of the event                                                                           |
-| callback  | function | No       | The callback function to remove. If not provided, removes all listeners for this event name |
+<table><thead><tr><th width="155.0859375">Parameter</th><th width="136.0546875">Type</th><th width="117.73828125">Required</th><th>Description</th></tr></thead><tbody><tr><td>eventName</td><td>string</td><td>Yes</td><td>Name of the event</td></tr><tr><td>callback</td><td>function</td><td>No</td><td>The callback function to remove. If not provided, removes all listeners for this event name</td></tr></tbody></table>
 
 
 

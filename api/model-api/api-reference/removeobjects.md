@@ -22,9 +22,7 @@ removeObjects(objectNamesOrIds: string[]): Promise<Object[]>
 
 #### Parameters
 
-| Name               | Type       | Required | Description                            |
-| ------------------ | ---------- | -------- | -------------------------------------- |
-| `objectNamesOrIds` | `string[]` | Yes      | Array of object names or IDs to remove |
+<table><thead><tr><th width="181.87890625">Name</th><th width="133.96875">Type</th><th width="111.05078125">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>objectNamesOrIds</code></td><td><code>string[]</code></td><td>Yes</td><td>Array of object names or IDs to remove</td></tr></tbody></table>
 
 #### Returns
 

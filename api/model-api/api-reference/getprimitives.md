@@ -6,7 +6,11 @@ hidden: true
 
 #### getPrimitives
 
+
+
 Returns the settings of a primitive object (Box, Sphere, Cylinder, etc.).
+
+
 
 #### Signature
 
@@ -16,13 +20,13 @@ getPrimitives(name: string): Promise<PrimitiveNodeSettings | null>
 
 #### Parameters
 
-| Name   | Type     | Required | Description                  |
-| ------ | -------- | -------- | ---------------------------- |
-| `name` | `string` | Yes      | Name of the primitive object |
+<table><thead><tr><th width="158.6640625">Name</th><th width="136.04296875">Type</th><th width="121.1875">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code></td><td><code>string</code></td><td>Yes</td><td>Name of the primitive object</td></tr></tbody></table>
 
 #### Returns
 
-`Promise<PrimitiveNodeSettings | null>` — Settings specific to the primitive type, or `null` if object not found or not a primitive.
+
+
+`Promise<PrimitiveNodeSettings | null>` - Settings specific to the primitive type, or `null` if object not found or not a primitive.
 
 The returned type depends on the primitive:
 
@@ -38,6 +42,8 @@ type PrimitiveNodeSettings =
   | PrimitiveSquarePlaneSettings
   | PrimitiveInfinitePlaneSettings;
 ```
+
+
 
 #### Usage
 
@@ -57,7 +63,11 @@ if (settings === null) {
 }
 ```
 
+
+
 #### Primitive Types
+
+
 
 **PrimitiveBoxSettings:**
 

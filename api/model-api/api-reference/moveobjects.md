@@ -15,12 +15,7 @@ moveObjects(
 ): Promise<void}>
 ```
 
-| Parameters         | Description                                                                                                                                                            | Type                   |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
-| objectNamesOrIds   | Name/s or id/s of the objects to duplicate.                                                                                                                            | `string` \| `string[]` |
-| insertUnderId      | Specifies the group id to move the objects under.                                                                                                                      | `string`               |
-| insertBeforeId     | Specifies the object id to move the objects before.                                                                                                                    | `string`               |
-| keepGlobalPosition | Specifies weather or not to keep the current global transformation of the object/s to move, or to apply the matrix transform of the new parents’ (defaults to `true`). | `boolean`              |
+<table><thead><tr><th width="200.94140625">Parameters</th><th width="355.171875">Description</th><th>Type</th></tr></thead><tbody><tr><td>objectNamesOrIds</td><td>Name/s or id/s of the objects to duplicate.</td><td><code>string</code> | <code>string[]</code></td></tr><tr><td>insertUnderId</td><td>Specifies the group id to move the objects under.</td><td><code>string</code></td></tr><tr><td>insertBeforeId</td><td>Specifies the object id to move the objects before.</td><td><code>string</code></td></tr><tr><td>keepGlobalPosition</td><td>Specifies weather or not to keep the current global transformation of the object/s to move, or to apply the matrix transform of the new parents’ (defaults to <code>true</code>).</td><td><code>boolean</code></td></tr></tbody></table>
 
 
 

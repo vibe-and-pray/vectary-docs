@@ -44,7 +44,7 @@ We welcome your questions and feedback. If something is unclear, missing, incorr
 
 ### Objects
 
-<table><thead><tr><th width="49.75">#</th><th width="186.04296875">Method</th><th width="301.296875">Description</th><th>Snippet</th></tr></thead><tbody><tr><td>9</td><td><a href="getobjects.md"><mark style="color:blue;"><strong>getObjects</strong></mark></a></td><td>Get objects by name or all objects</td><td><a href="https://codesandbox.io/p/sandbox/getobjects-thf9hc">getObjects</a></td></tr><tr><td>10</td><td><a href="removeobjects.md"><mark style="color:blue;"><strong>removeObjects</strong></mark></a></td><td>Remove objects from the scene</td><td><a href="https://codesandbox.io/p/devbox/getobjects-forked-dy7k3x">removeObjects</a></td></tr><tr><td>11</td><td><a href="gethoveredobjects.md"><mark style="color:blue;"><strong>getHoveredObjects</strong></mark></a></td><td>Get objects currently under cursor</td><td><a href="https://codesandbox.io/p/sandbox/transformations-frrd3q">Transformations</a></td></tr><tr><td>12</td><td><a href="duplicateobjects.md"><mark style="color:blue;"><strong>duplicateObjects</strong></mark></a></td><td>Duplicate objects</td><td><a href="https://codesandbox.io/p/sandbox/duplicateobjects-rh2fh9">duplicateObjects</a></td></tr><tr><td>13</td><td><a href="moveobjects.md"><mark style="color:blue;"><strong>moveObjects</strong></mark></a></td><td>Move objects in hierarchy</td><td><a href="https://codesandbox.io/p/sandbox/moveobjects-7ynjmq">moveObjects</a></td></tr><tr><td>14</td><td><a href="togglevisibility.md"><mark style="color:blue;"><strong>toggleVisibility</strong></mark></a></td><td>Show or hide objects</td><td><a href="https://codesandbox.io/p/sandbox/togglevisibility-2r9fcw">toggleVisibility</a></td></tr><tr><td>15</td><td><a href="selectobjects.md"><mark style="color:blue;"><strong>selectObjects</strong></mark></a></td><td></td><td></td></tr><tr><td>16</td><td><a href="deselectobjects.md"><mark style="color:blue;"><strong>deselectObjects</strong></mark></a></td><td></td><td></td></tr><tr><td>17</td><td><a href="getselectedobjects.md"><mark style="color:blue;"><strong>getSelectedObjects</strong></mark></a></td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="49.75">#</th><th width="186.04296875">Method</th><th width="301.296875">Description</th><th>Snippet</th></tr></thead><tbody><tr><td>9</td><td><a href="getobjects.md"><mark style="color:blue;"><strong>getObjects</strong></mark></a></td><td>Get objects by name or all objects</td><td><a href="https://codesandbox.io/p/sandbox/getobjects-thf9hc">getObjects</a></td></tr><tr><td>10</td><td><a href="removeobjects.md"><mark style="color:blue;"><strong>removeObjects</strong></mark></a></td><td>Remove objects from the scene</td><td><a href="https://codesandbox.io/p/devbox/getobjects-forked-dy7k3x">removeObjects</a></td></tr><tr><td>11</td><td><a href="gethoveredobjects.md"><mark style="color:blue;"><strong>getHoveredObjects</strong></mark></a></td><td>Get objects currently under cursor</td><td><a href="https://codesandbox.io/p/sandbox/transformations-frrd3q">Transformations</a></td></tr><tr><td>12</td><td><a href="duplicateobjects.md"><mark style="color:blue;"><strong>duplicateObjects</strong></mark></a></td><td>Duplicate objects</td><td><a href="https://codesandbox.io/p/sandbox/duplicateobjects-rh2fh9">duplicateObjects</a></td></tr><tr><td>13</td><td><a href="moveobjects.md"><mark style="color:blue;"><strong>moveObjects</strong></mark></a></td><td>Move objects in hierarchy</td><td><a href="https://codesandbox.io/p/sandbox/moveobjects-7ynjmq">moveObjects</a></td></tr><tr><td>14</td><td><a href="togglevisibility.md"><mark style="color:blue;"><strong>toggleVisibility</strong></mark></a></td><td>Show or hide objects</td><td><a href="https://codesandbox.io/p/sandbox/togglevisibility-2r9fcw">toggleVisibility</a></td></tr><tr><td>15</td><td><a href="selectobjects.md"><mark style="color:blue;"><strong>selectObjects</strong></mark></a></td><td>Select one or more objects by name or ID</td><td></td></tr><tr><td>16</td><td><a href="deselectobjects.md"><mark style="color:blue;"><strong>deselectObjects</strong></mark></a></td><td>Remove objects from selection, or clear entire selection</td><td></td></tr><tr><td>17</td><td><a href="getselectedobjects.md"><mark style="color:blue;"><strong>getSelectedObjects</strong></mark></a></td><td>Get currently selected objects</td><td></td></tr></tbody></table>
 
 ***
 
@@ -52,7 +52,7 @@ We welcome your questions and feedback. If something is unclear, missing, incorr
 
 ### Gizmo
 
-<table><thead><tr><th width="49.75">#</th><th width="186.04296875">Method</th><th width="301.296875">Description</th><th>Snippet</th></tr></thead><tbody><tr><td>18</td><td><a href="configuregizmo.md"><mark style="color:blue;"><strong>configureGizmo</strong></mark></a></td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="49.75">#</th><th width="156.0546875">Method</th><th width="304.9375">Description</th><th>Snippet</th></tr></thead><tbody><tr><td>18</td><td><a href="configuregizmo.md"><mark style="color:blue;"><strong>configureGizmo</strong></mark></a></td><td>Configure transform gizmo visibility, orientation, and snapping</td><td></td></tr></tbody></table>
 
 ***
 
@@ -90,7 +90,7 @@ We welcome your questions and feedback. If something is unclear, missing, incorr
 
 ### Primitives
 
-<table><thead><tr><th width="47.39453125">#</th><th width="193.953125">Method</th><th>Description</th><th>Snippet</th></tr></thead><tbody><tr><td>35</td><td><a href="getprimitives.md"><mark style="color:blue;"><strong>getPrimitives</strong></mark></a></td><td>Get primitive settings</td><td><a href="https://codesandbox.io/p/sandbox/get-setprimitives-g9smpy">get-setPrimitives</a></td></tr><tr><td>36</td><td><a href="setprimitives.md"><mark style="color:blue;"><strong>setPrimitives</strong></mark></a></td><td>Set primitive settings</td><td><a href="https://codesandbox.io/p/sandbox/get-setprimitives-g9smpy">get-setPrimitives</a></td></tr><tr><td>37</td><td><a href="createbox.md"><mark style="color:blue;"><strong>createBox</strong></mark></a></td><td></td><td></td></tr><tr><td>38</td><td><a href="createsphere.md"><mark style="color:blue;"><strong>createSphere</strong></mark></a></td><td></td><td></td></tr><tr><td>39</td><td><a href="createcone.md"><mark style="color:blue;"><strong>createCone</strong></mark></a></td><td></td><td></td></tr><tr><td>40</td><td><a href="createcylinder.md"><mark style="color:blue;"><strong>createCylinder</strong></mark></a></td><td></td><td></td></tr><tr><td>41</td><td><a href="createcylinder.md"><mark style="color:blue;"><strong>createTorus</strong></mark></a></td><td></td><td></td></tr><tr><td>42</td><td><a href="createtube.md"><mark style="color:blue;"><strong>createTube</strong></mark></a></td><td></td><td></td></tr><tr><td>43</td><td><a href="createpolyhedron.md"><mark style="color:blue;"><strong>createPolyhedron</strong></mark></a></td><td></td><td></td></tr><tr><td>44</td><td><a href="createplane.md"><mark style="color:blue;"><strong>createPlane</strong></mark></a></td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="47.39453125">#</th><th width="170.9765625">Method</th><th width="318">Description</th><th>Snippet</th></tr></thead><tbody><tr><td>35</td><td><a href="getprimitives.md"><mark style="color:blue;"><strong>getPrimitives</strong></mark></a></td><td>Get primitive settings</td><td><a href="https://codesandbox.io/p/sandbox/get-setprimitives-g9smpy">get-setPrimitives</a></td></tr><tr><td>36</td><td><a href="setprimitives.md"><mark style="color:blue;"><strong>setPrimitives</strong></mark></a></td><td>Set primitive settings</td><td><a href="https://codesandbox.io/p/sandbox/get-setprimitives-g9smpy">get-setPrimitives</a></td></tr><tr><td>37</td><td><a href="createbox.md"><mark style="color:blue;"><strong>createBox</strong></mark></a></td><td>Create a box primitive and add it to the scene</td><td></td></tr><tr><td>38</td><td><a href="createsphere.md"><mark style="color:blue;"><strong>createSphere</strong></mark></a></td><td>Create a sphere primitive and add it to the scene</td><td></td></tr><tr><td>39</td><td><a href="createcone.md"><mark style="color:blue;"><strong>createCone</strong></mark></a></td><td>Create a cone primitive and add it to the scene</td><td></td></tr><tr><td>40</td><td><a href="createcylinder.md"><mark style="color:blue;"><strong>createCylinder</strong></mark></a></td><td>Create a cylinder primitive and add it to the scene</td><td></td></tr><tr><td>41</td><td><a href="createcylinder.md"><mark style="color:blue;"><strong>createTorus</strong></mark></a></td><td>Create a torus primitive and add it to the scene</td><td></td></tr><tr><td>42</td><td><a href="createtube.md"><mark style="color:blue;"><strong>createTube</strong></mark></a></td><td>Create a tube primitive and add it to the scene</td><td></td></tr><tr><td>43</td><td><a href="createpolyhedron.md"><mark style="color:blue;"><strong>createPolyhedron</strong></mark></a></td><td>Create a polyhedron primitive and add it to the scene</td><td></td></tr><tr><td>44</td><td><a href="createplane.md"><mark style="color:blue;"><strong>createPlane</strong></mark></a></td><td>Create a square plane primitive and add it to the scene</td><td></td></tr></tbody></table>
 
 
 
@@ -100,7 +100,7 @@ We welcome your questions and feedback. If something is unclear, missing, incorr
 
 ### Boolean Operations
 
-<table><thead><tr><th width="47.39453125">#</th><th width="193.953125">Method</th><th>Description</th><th>Snippet</th></tr></thead><tbody><tr><td>45</td><td><a href="setbooleanenabled.md"><mark style="color:blue;"><strong>setBooleanEnabled</strong></mark></a></td><td></td><td></td></tr><tr><td>46</td><td><a href="getbooleanenabled.md"><mark style="color:blue;"><strong>getBooleanEnabled</strong></mark></a></td><td></td><td></td></tr><tr><td>47</td><td><a href="setbooleanchildoperation.md"><mark style="color:blue;"><strong>setBooleanChildOperation</strong></mark></a></td><td></td><td></td></tr><tr><td>48</td><td><a href="getbooleanchildoperation.md"><mark style="color:blue;"><strong>getBooleanChildOperation</strong></mark></a></td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="47.39453125">#</th><th width="193.953125">Method</th><th width="306.50390625">Description</th><th>Snippet</th></tr></thead><tbody><tr><td>45</td><td><a href="setbooleanenabled.md"><mark style="color:blue;"><strong>setBooleanEnabled</strong></mark></a></td><td>Enable or disable boolean calculation on a boolean operator</td><td></td></tr><tr><td>46</td><td><a href="getbooleanenabled.md"><mark style="color:blue;"><strong>getBooleanEnabled</strong></mark></a></td><td>Check if boolean calculation is active</td><td></td></tr><tr><td>47</td><td><a href="setbooleanchildoperation.md"><mark style="color:blue;"><strong>setBooleanChildOperation</strong></mark></a></td><td>Set operation type for a child of a boolean operator</td><td></td></tr><tr><td>48</td><td><a href="getbooleanchildoperation.md"><mark style="color:blue;"><strong>getBooleanChildOperation</strong></mark></a></td><td>Get operation type for a child of a boolean operator</td><td></td></tr></tbody></table>
 
 
 
@@ -224,6 +224,24 @@ type Object = {
   text3d?: Text3DNodeSettings;
 };
 ```
+
+
+
+### CreatePrimitiveOptions
+
+Shared options object accepted by all `create*` primitive methods
+
+```typescript
+type CreatePrimitiveOptions = {
+  name?: string;
+  position?: Vector3;
+  rotation?: Euler;
+  scale?: Vector3;
+  primitiveSettings?: Partial<PrimitiveNodeSettings>;
+};
+```
+
+
 
 
 

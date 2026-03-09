@@ -26,10 +26,7 @@ addEventListener(eventName: string, callback: (value: any) => void): Promise<voi
 
 #### **Parameters**
 
-| Parameter | Type     | Required | Description                            |
-| --------- | -------- | -------- | -------------------------------------- |
-| eventName | string   | Yes      | Name of the event to listen for        |
-| callback  | function | Yes      | Function called when event is received |
+<table><thead><tr><th width="187.57421875">Parameter</th><th width="121.1328125">Type</th><th width="109.17578125">Required</th><th>Description</th></tr></thead><tbody><tr><td>eventName</td><td>string</td><td>Yes</td><td>Name of the event to listen for</td></tr><tr><td>callback</td><td>function</td><td>Yes</td><td>Function called when event is received</td></tr></tbody></table>
 
 
 

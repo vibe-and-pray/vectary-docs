@@ -30,7 +30,7 @@ None.
 
 #### Returns
 
-`Promise<ConfigurationState[]>` — Array of variant and material states.
+`Promise<ConfigurationState[]>` - Array of variant and material states.
 
 See [ConfigurationState](./#configurationstate) in Common Types.
 

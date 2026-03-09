@@ -22,10 +22,7 @@ dispatchEvent(eventName: string, value?: any): Promise<void>
 
 #### **Parameters**
 
-| Parameter | Type   | Required | Description                   |
-| --------- | ------ | -------- | ----------------------------- |
-| eventName | string | Yes      | Name of the event to dispatch |
-| value     | any    | No       | Value to send with the event  |
+<table><thead><tr><th width="176.37890625">Parameter</th><th width="135.375">Type</th><th width="108.88671875">Required</th><th>Description</th></tr></thead><tbody><tr><td>eventName</td><td>string</td><td>Yes</td><td>Name of the event to dispatch</td></tr><tr><td>value</td><td>any</td><td>No</td><td>Value to send with the event</td></tr></tbody></table>
 
 #### **Returns**
 
