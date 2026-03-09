@@ -35,7 +35,7 @@ selectObjects(
 
 
 
-`Promise<SceneObject[]>` - the resulting selected objects.
+`Promise<SceneObject[]>` — the resulting selected objects. Each object includes full scene data: transform, materials, primitive settings, and children.
 
 
 

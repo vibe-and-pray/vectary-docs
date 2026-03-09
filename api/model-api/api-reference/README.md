@@ -174,7 +174,7 @@ We welcome your questions and feedback. If something is unclear, missing, incorr
 
 ## Common Types
 
-> Types that appear in multiple methods are documented here. Types specific to a single method are described on that method's page.
+Types that appear in multiple methods are documented here. Types specific to a single method are described on that method's page.
 
 
 
@@ -214,6 +214,7 @@ Scene object returned by `getObjects()` and similar methods.
 ```typescript
 type Object = {
   id: string;
+  instanceId: string;
   name: string;
   type: SceneObjects;
   position: Vector3;

@@ -34,7 +34,7 @@ None.
 
 
 
-`Promise<SceneObject[]>` - array of currently selected objects. Returns an empty array if nothing is selected.
+`Promise<SceneObject[]>` — currently selected objects. Each object includes full scene data: transform, materials, primitive settings, and children. Returns an empty array if nothing is selected.
 
 
 
