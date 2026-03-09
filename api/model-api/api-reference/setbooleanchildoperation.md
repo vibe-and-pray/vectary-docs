@@ -53,4 +53,4 @@ await api.setBooleanChildOperation("Boolean 1", "Sphere", "Union");
 
 
 
-* The operation values use PascalCase here (`'Subtract'`, `'Intersection'`, `'Union'`). The corresponding getter `getBooleanChildOperation` returns uppercase internal values (`'A_MINUS_B'`, `'INTERSECTION'`, `'UNION'`).
+* The operation values are case-insensitive (`'Subtract'`, `'subtract'`, and `'SUBTRACT'` all work). The corresponding getter `getBooleanChildOperation` returns uppercase internal values (`'A_MINUS_B'`, `'INTERSECTION'`, `'UNION'`).
