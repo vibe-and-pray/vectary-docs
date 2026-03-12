@@ -14,7 +14,7 @@ Get the current boolean operation type applied to a specific child of a boolean 
 
 #### Signature
 
-```typescript
+```
 getBooleanChildOperation(
   booleanNameOrId: string,
   childNameOrId: string
@@ -25,23 +25,38 @@ getBooleanChildOperation(
 
 #### Parameters
 
-<table><thead><tr><th width="173.54296875">Parameter</th><th width="117.0703125">Type</th><th width="106.20703125">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>booleanNameOrId</code></td><td><code>string</code></td><td>Yes</td><td>Name or ID of the parent boolean operator</td></tr><tr><td><code>childNameOrId</code></td><td><code>string</code></td><td>Yes</td><td>Name or ID of the child object</td></tr></tbody></table>
-
-
+<table><thead><tr><th width="193.125">Parameter</th><th width="118.6796875">Type</th><th width="110.26171875">Required</th><th>Description</th></tr></thead><tbody><tr><td><code>booleanNameOrId</code></td><td><code>string</code></td><td>Yes</td><td>Name or ID of the parent boolean operator</td></tr><tr><td><code>childNameOrId</code></td><td><code>string</code></td><td>Yes</td><td>Name or ID of the child object</td></tr></tbody></table>
 
 #### Returns
 
 
 
-`Promise<string | null>` - one of `'UNION'`, `'INTERSECTION'`, `'A_MINUS_B'`, `'B_MINUS_A'`, or `null` if the child is not found in the operator.
+`Promise<string | null>` - the current operation as an uppercase string, or `null` if the child is not found in the operator.
 
-<table><thead><tr><th width="262.87109375">Return value</th><th>Meaning</th></tr></thead><tbody><tr><td><code>'UNION'</code></td><td>Objects are combined</td></tr><tr><td><code>'INTERSECTION'</code></td><td>Only overlapping volume remains</td></tr><tr><td><code>'A_MINUS_B'</code></td><td>Child is subtracted from the parent</td></tr><tr><td><code>'B_MINUS_A'</code></td><td>Parent is subtracted from the child</td></tr><tr><td><code>null</code></td><td>Child not found in this boolean operator</td></tr></tbody></table>
+| Return value     | Meaning                                  |
+| ---------------- | ---------------------------------------- |
+| `'UNION'`        | Objects are combined into one            |
+| `'INTERSECTION'` | Only the overlapping volume remains      |
+| `'A_MINUS_B'`    | Child is subtracted from the base object |
+| `null`           | Child not found in this boolean operator |
+
+
+
+#### **Note:** <br>
+
+* the return values are uppercase internal identifiers. To set an operation, use the PascalCase values accepted by `setBooleanChildOperation`: `'Union'`, `'Intersection'`, `'Subtract'`.
 
 
 
 #### Examples
 
-```javascript
+
+
+```js
 const op = await api.getBooleanChildOperation("Boolean 1", "Sphere");
 console.log("Current operation:", op); // e.g., "A_MINUS_B"
+
+// Returns null if child is not part of this boolean operator
+const op = await api.getBooleanChildOperation("Boolean 1", "NonExistent");
+console.log(op); // null
 ```
