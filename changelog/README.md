@@ -9,9 +9,7 @@ hidden: true
 
 
 
-{% content-ref url="february-2026.md" %}
-[february-2026.md](february-2026.md)
-{% endcontent-ref %}
+
 
 
 
@@ -19,7 +17,8 @@ hidden: true
 
 <summary>Previous Releases</summary>
 
-
+\
+[february-2026.md](february-2026.md "mention")
 
 [january-2026.md](january-2026.md "mention")
 

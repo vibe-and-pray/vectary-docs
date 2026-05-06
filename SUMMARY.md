@@ -280,6 +280,7 @@
   * [Material picker \[template\]](showcases/material-picker-template.md)
 * [FAQ](faq.md)
 * [Changelog](changelog/README.md)
+  * [May 2026](changelog/may-2026.md)
   * [February 2026](changelog/february-2026.md)
   * [January 2026](changelog/january-2026.md)
   * [November 2025](changelog/november-2025.md)
