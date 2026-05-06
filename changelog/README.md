@@ -7,9 +7,9 @@ hidden: true
 
 
 
-
-
-
+{% content-ref url="may-2026.md" %}
+[may-2026.md](may-2026.md)
+{% endcontent-ref %}
 
 
 
