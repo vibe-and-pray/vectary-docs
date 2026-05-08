@@ -12,7 +12,6 @@ Vectary allows the generation of textured 3D objects using a wide range of popul
 
 
 * **Hunyuan 3**
-* **Seed 3D**
 * **Trellis 2**
 * **Meshy 6**
 * **Rodin 2**
