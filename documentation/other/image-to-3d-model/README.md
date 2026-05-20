@@ -11,12 +11,18 @@ Vectary allows the generation of textured 3D objects using a wide range of popul
 
 
 
+* **Hunyuan 3.1**
 * **Hunyuan 3**
+* **Tripo H3.1**&#x20;
+* **Tripo 2.5**
+* **Pixal 3D**
 * **Trellis 2**
+* **Trellis**
 * **Meshy 6**
+* **Meshy 5**
 * **Rodin 2**
-* **OmniPart**
-* **Hunyuan 2.1**
+
+
 
 \
 These AI models differ in output quality, polygon count, and generation time.
