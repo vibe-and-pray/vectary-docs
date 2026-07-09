@@ -272,6 +272,10 @@
     * [Custom code](api/model-api/ecommerce/custom-code.md)
   * [API Demos](api/model-api/api-demos.md)
 
+## Canvas
+
+* [Overview](canvas/overview.md)
+
 ***
 
 * [Tutorials](tutorials/README.md)
