@@ -22,13 +22,15 @@ Learn more:<br>
 
 
 
-Projects are private by default and accessible only to you and your workspace members. To share your project:
+Projects are private by default and accessible only to you and your workspace members. To share your project:<br>
 
 1. Click the **Share** button in the top-right corner
-2. If you’ve made changes, click **Update all changes** to sync the latest version
+2. Then turn on **`Share to Web`** toggle and click **`Update all changes`** to sync the latest version
 3. Copy the generated link or embed code
 
-<figure><img src="../../.gitbook/assets/image (67).png" alt="" width="366"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (545).png" alt="" width="365"><figcaption></figcaption></figure>
+
+
 
 If any changes were made to the project, simply update them by clicking **Update all changes**:
 
@@ -36,11 +38,17 @@ If any changes were made to the project, simply update them by clicking **Update
 
 
 
-Once shared, your project becomes accessible to anyone with the link or through the embedded view.&#x20;
+{% hint style="warning" %}
+#### **Privacy**
 
-**Share** can be disabled at any time to make the project inaccessible.
+By default, the **Privacy** toggle is enabled. This means that a project is visible only to the project owner and members of the workspace.
 
-<br>
+![](<../../.gitbook/assets/image (548).png>)
+{% endhint %}
+
+
+
+
 
 ## Share settings
 
