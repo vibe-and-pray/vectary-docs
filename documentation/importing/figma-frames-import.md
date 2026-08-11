@@ -48,7 +48,7 @@ Select the object and material property where the texture should be imported, th
 {% endstep %}
 
 {% step %}
-Paste Figma frame link <mark style="color:purple;">(Vactary)</mark>
+Paste Figma frame link <mark style="color:purple;">(Vectary)</mark>
 
 Paste the copied frame link into the provided field and press _Enter_\
 \
