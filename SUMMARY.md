@@ -194,6 +194,7 @@
   * [Scene panel](documentation/other/scene-panel.md)
   * [Shortcuts](documentation/other/shortcuts.md)
   * [Offline Viewer](documentation/other/offline-viewer.md)
+  * [Delete your Vectary account](documentation/other/delete-account.md)
 
 ## API
 
