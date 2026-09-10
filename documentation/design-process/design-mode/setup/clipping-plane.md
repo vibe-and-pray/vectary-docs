@@ -10,7 +10,7 @@ The effect of the clipping plane can be restricted to specific objects, groups, 
 Since the Clipping plane is an object, it can be animated and used in interaction setups
 {% endhint %}
 
-{% embed url="https://screen.studio/share/840dQexX" %}
+{% embed url="https://screen.studio/share/840dQexX?test=1" %}
 
 Multiple clipping planes can be used simultaneously, allowing for more complex sectional views and controlled visual effects.
 

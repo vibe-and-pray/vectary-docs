@@ -191,10 +191,10 @@
   * [3D to image (GenAI)](documentation/other/3d-to-image.md)
   * [Selections](documentation/other/selections.md)
   * [Comments](documentation/other/comments.md)
+  * [Delete your Vectary account](documentation/other/delete-account.md)
   * [Scene panel](documentation/other/scene-panel.md)
   * [Shortcuts](documentation/other/shortcuts.md)
   * [Offline Viewer](documentation/other/offline-viewer.md)
-  * [Delete your Vectary account](documentation/other/delete-account.md)
 
 ## API
 
