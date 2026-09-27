@@ -23,11 +23,13 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Welcome to Vectary Docs
 
-Meet Vectary, an online platform for creating and managing interactive 3D and AR designs that inspire, educate and solve problems. ‍No downloads, no-code: all in the browser.
+Meet Vectary, an online design platform for developing concepts with AI and creating interactive 3D presentations and AR experiences that are easy to understand and share.
 
 
 

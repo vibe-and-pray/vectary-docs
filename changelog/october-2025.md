@@ -101,7 +101,7 @@
 * Fixed bug that prevented changing transformation settings for textures [imported from Figma](../documentation/importing/figma-frames-import.md)
 * Fixed bug where duplicating [Floating UI](../documentation/3d-configurator/floating-ui/) sometimes resulted in doubled elements
 * Fixed bug where hidden objects in Array [modifier](../documentation/design-process/design-mode/modifiers/) were still visible in preview and shared link
-* Fixed bug that caused [Floating UI](../documentation/3d-configurator/floating-ui/) flickering (under certain settings) in project [preview on Dashboard](../documentation/getting-started/dashboard.md#preview-mode)
+* Fixed bug that caused [Floating UI](../documentation/3d-configurator/floating-ui/) flickering (under certain settings) in project [preview on Dashboard](../documentation/getting-started/workspace.md#preview-mode)
 * Fixed issue causing incorrect transformation of animated objects in [AR](../documentation/project-settings/augmented-reality-webar.md) on iOS for objects with non-uniform scaling
 * Fixed several issues that caused project saving errors
 * Minor bug fixes

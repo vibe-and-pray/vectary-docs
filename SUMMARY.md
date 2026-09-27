@@ -5,13 +5,13 @@
 ## Documentation
 
 * [Getting started](documentation/getting-started/README.md)
-  * [System requirements](documentation/getting-started/system-requirements.md)
-  * [User interface](documentation/getting-started/user-interface.md)
+  * [Workspace](documentation/getting-started/workspace.md)
+  * [Seats and Roles](documentation/getting-started/seats-and-roles.md)
+  * [Studio navigation](documentation/getting-started/studio-navigation.md)
   * [Rendering](documentation/getting-started/rendering.md)
-  * [Dashboard](documentation/getting-started/dashboard.md)
   * [Account settings](documentation/getting-started/account-settings.md)
-  * [Roles](documentation/getting-started/roles.md)
   * [Scene orientation](documentation/getting-started/scene-orientation.md)
+  * [System requirements](documentation/getting-started/system-requirements.md)
   * [Units](documentation/getting-started/units.md)
 * [Importing](documentation/importing/README.md)
   * [Import formats](documentation/importing/import-formats.md)

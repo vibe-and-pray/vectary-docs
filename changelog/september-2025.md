@@ -68,7 +68,7 @@
 
 * Fixed issue preventing use of [variables](../documentation/3d-configurator/variables-and-expressions/) for [Normal map](../documentation/design-process/materials-and-textures/basic-materials/normal-map.md) and [Opacity](../documentation/design-process/materials-and-textures/basic-materials/opacity.md) properties
 * Fixed bug preventing AR file generation in Studio when a video texture was used in [Emission](../documentation/design-process/materials-and-textures/basic-materials/emission.md), [Roughness](../documentation/design-process/materials-and-textures/basic-materials/roughness.md), or [Metalness](../documentation/design-process/materials-and-textures/basic-materials/metalness.md) properties
-* Fixed bug where AR could sometimes fail to open on the first attempt if AR files were generated in the [dashboard preview](../documentation/getting-started/dashboard.md#preview-mode)
+* Fixed bug where AR could sometimes fail to open on the first attempt if AR files were generated in the [dashboard preview](../documentation/getting-started/workspace.md#preview-mode)
 * Fixed bug where [aspect ratio](../documentation/design-process/camera.md#custom-aspect-ratio) was not applied when switching cameras via interaction
 * Fixed bug causing **Hue** value to change when adjusting color in the palette
 {% endhint %}

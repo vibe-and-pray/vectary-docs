@@ -1,22 +1,48 @@
 ---
-description: All about roles for your Business workspace
+description: Roles define what each workspace member can see and do.
 ---
 
-# Roles
+# Seats and Roles
 
 
 
-## Overview
+### Inviting members <a href="#block-0a23bb7ea7504d10a056b7a4d3cd266c" id="block-0a23bb7ea7504d10a056b7a4d3cd266c"></a>
 
 
 
-Team permissions are available within the Business workspace and ensure that workspace members have access rights that align with their designated roles. We have established several levels of access to guarantee teams confidence in the security and privacy of their projects and information.
+Open workspace settings (gear icon) → **Workspace** tab to invite members.
 
+<figure><img src="../../.gitbook/assets/image (560).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/image (562).png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="info" %}
-It is important to note that roles are assigned within single workspaces. In cases where multiple Business workspaces exist, they operate independently regarding settings. Consequently, a member can be assigned different roles in each separate workspace.
+{% hint style="warning" icon="lock-keyhole" %}
+Only the workspace **Owner** and **Manager** can access these settings. Other members can neither invite nor view the workspace member list.
 {% endhint %}
+
+
+
+Enter an email, pick a role, and send the invite:
+
+<div align="left"><figure><img src="../../.gitbook/assets/image (565).png" alt="" width="375"><figcaption></figcaption></figure></div>
+
+Role can be changed at any time from the same list:
+
+<div align="left"><figure><img src="../../.gitbook/assets/image (566).png" alt="" width="375"><figcaption></figcaption></figure></div>
+
+
+
+If the invited person doesn't have a Vectary account yet, they'll get an email invite to sign up. Your workspace will be added to the invited user's workspace list.
+
+If the user already has an account, they don't need to do anything — no email confirmation is required, as the invite is accepted automatically.
+
+
+
+
+
+## Roles: <a href="#owner" id="owner"></a>
+
+
 
 
 

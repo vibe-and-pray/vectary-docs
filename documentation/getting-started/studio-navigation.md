@@ -1,16 +1,8 @@
----
-description: Explore the intuitive Vectary Studio interface
----
-
-# User interface
+# Studio navigation
 
 
 
-The UI of Vectary Studio can be described as modern, user-friendly, and intuitive. It follows common design standards, making it easy to navigate without requiring extensive learning.
-
-
-
-<figure><img src="../../.gitbook/assets/image (119).png" alt=""><figcaption><p>click to enlarge the image</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (119).png" alt=""><figcaption></figcaption></figure>
 
 
 

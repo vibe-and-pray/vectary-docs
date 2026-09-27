@@ -1,3 +1,9 @@
+---
+description: This page is outdated. For current information, see the Workspace page.
+hidden: true
+noIndex: true
+---
+
 # Account settings
 
 
@@ -69,7 +75,7 @@ To update the email address linked to an account, contact the support service. S
 
 
 
-Please note that subscriptions are linked to workspaces, not to individual accounts. Since each workspace has its own subscription, payment settings are located in the [workspace settings](dashboard.md#block-2aeae337a8b34714ab6f8294fee211af).
+Please note that subscriptions are linked to workspaces, not to individual accounts. Since each workspace has its own subscription, payment settings are located in the [workspace settings](workspace.md#block-2aeae337a8b34714ab6f8294fee211af).
 
 
 
