@@ -33,10 +33,18 @@ Meet Vectary, an online design platform for developing concepts with AI and crea
 
 
 
+{% columns %}
+{% column %}
+### Vectary Canvas
+
+{% embed url="https://www.youtube.com/watch?v=5KhZKzW67PU" %}
+{% endcolumn %}
+
+{% column %}
+### Vectary Studio
+
 {% embed url="https://www.youtube.com/watch?v=9O_Zi9lYnCU" %}
-
-
-
-
+{% endcolumn %}
+{% endcolumns %}
 
 <br>

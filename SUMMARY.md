@@ -6,11 +6,11 @@
 
 * [Canvas overview](canvas/overview.md)
 
-## Documentation
+## 3D Studio <a href="#documentation" id="documentation"></a>
 
 * [Getting started](documentation/getting-started/README.md)
   * [Workspace](documentation/getting-started/workspace.md)
-  * [Seats and Roles](documentation/getting-started/seats-and-roles.md)
+  * [Seats and Roles](documentation/getting-started/roles.md)
   * [Studio navigation](documentation/getting-started/studio-navigation.md)
   * [Rendering](documentation/getting-started/rendering.md)
   * [Account settings](documentation/getting-started/account-settings.md)
