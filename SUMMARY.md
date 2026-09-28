@@ -275,7 +275,7 @@
 
 ## Canvas
 
-* [Overview](canvas/overview.md)
+* [Canvas overview](canvas/overview.md)
 
 ***
 
