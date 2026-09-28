@@ -1,3 +1,32 @@
+---
+cover: ../.gitbook/assets/canvas-collab-board.jpg
+coverY: 0
+layout:
+  width: default
+  cover:
+    visible: true
+    size: hero
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
+---
+
 # Canvas overview
 
 Vectary Canvas is an infinite canvas where you collect references, generate images, video and 3D with AI presets, and turn ideas into concepts, all in one place.
@@ -7,6 +36,10 @@ Vectary Canvas is an infinite canvas where you collect references, generate imag
 {% hint style="info" icon="rectangle-beta" %}
 Vectary Canvas is currently in **Beta**. We're actively improving it, and some features may change.
 {% endhint %}
+
+
+
+{% embed url="https://screen.studio/share/8dJUasny" %}
 
 
 
