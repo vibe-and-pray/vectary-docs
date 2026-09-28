@@ -2,6 +2,10 @@
 
 * [Welcome to Vectary Docs](README.md)
 
+## Canvas
+
+* [Canvas overview](canvas/overview.md)
+
 ## Documentation
 
 * [Getting started](documentation/getting-started/README.md)
@@ -272,10 +276,6 @@
     * [Shopify](api/model-api/ecommerce/shopify.md)
     * [Custom code](api/model-api/ecommerce/custom-code.md)
   * [API Demos](api/model-api/api-demos.md)
-
-## Canvas
-
-* [Canvas overview](canvas/overview.md)
 
 ***
 
